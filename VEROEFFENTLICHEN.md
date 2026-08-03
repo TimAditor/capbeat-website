@@ -39,9 +39,9 @@ GitHub lehnt Dateien über 100 MB ab — die Setup-EXE hat 163 MB.
 Der richtige Ort ist ein **GitHub Release** (bis 2 GB pro Datei, kostenlos):
 
 Repository → Releases → „Draft a new release“ → Tag z. B. `v0.8` →
-EXE als Anhang hochladen. Der Download-Link sieht dann so aus:
+EXE als Anhang hochladen - WICHTIG: als "CapBeat-Setup.exe" OHNE Versionsnummer, damit der latest-Link jede Version überlebt. Der Download-Link sieht dann so aus:
 
-    https://github.com/BENUTZERNAME/REPO/releases/latest/download/SubtitleCaptions-Setup-0.8.exe
+    https://github.com/BENUTZERNAME/REPO/releases/latest/download/CapBeat-Setup.exe
 
 Genau diesen Link in die „Herunterladen“-Knöpfe der index.html eintragen —
 `releases/latest` zeigt automatisch immer auf die neueste Version.
