@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ============ SEO ============
+     VOR DEM VERÖFFENTLICHEN: überall DEINE-DOMAIN.de ersetzen
+     (auch in sitemap.xml und robots.txt). -->
+<title>Untertitel für Musikvideos in Premiere Pro – WordBeat</title>
+<meta name="description" content="Das einzige Premiere-Pro-Plugin, das Songtexte aus einem fertigen Mix liest: Gesang wird lokal vom Instrumental getrennt, dann Wort für Wort animiert untertitelt. Kostenlos für Shorts & Reels, ohne Wasserzeichen." />
+<link rel="canonical" href="https://DEINE-DOMAIN.de/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Untertitel, die auch Songtexte können – WordBeat für Premiere Pro" />
+<meta property="og:description" content="Gesang lokal vom Instrumental trennen, dann Wort für Wort animiert untertiteln. 14 → 47 erkannte Wörter am selben Clip. Kostenlos ohne Wasserzeichen, Pro einmalig." />
+<meta property="og:url" content="https://DEINE-DOMAIN.de/" />
+<meta property="og:image" content="https://DEINE-DOMAIN.de/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "WordBeat",
+  "operatingSystem": "Windows",
+  "applicationCategory": "MultimediaApplication",
+  "description": "Animierte Wort-für-Wort-Untertitel für Adobe Premiere Pro. Musikmodus trennt den Gesang lokal vom Instrumental und liest Songtexte aus einem fertigen Mix.",
+  "offers": [
+    { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "Free" },
+    { "@type": "Offer", "price": "79", "priceCurrency": "EUR", "name": "Pro (Einmalzahlung)" }
+  ]
+}
+</script>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ================================================== Navigation -->
+<nav class="nav" aria-label="Hauptnavigation">
+  <div class="shell">
+    <a class="brand" href="#top"><span class="mark">W</span>Word<b>Beat</b></a>
+    <div class="nav-links">
+      <a href="auto-captions.html">Auto-Captions</a>
+      <a href="#musikmodus">Musikmodus</a>
+      <a href="#stile">Stile</a>
+      <a href="#preis">Preis</a>
+      <a href="#faq">Fragen</a>
+    </div>
+    <!-- TODO: Link auf GitHub-Release der EXE -->
+    <a class="btn btn--loud btn--small cta" href="#preis">Kostenlos laden</a>
+  </div>
+</nav>
+
+<!-- ================================================== Hero -->
+<header class="hero" id="top">
+  <div class="shell">
+    <div class="eyebrow">Plugin für Adobe Premiere Pro · Windows</div>
+    <h1>Untertitel, die auch <span class="hl">Songtexte</span> können.</h1>
+    <p class="lede">Wort-für-Wort-Captions für Interviews, Talking-Heads, Shorts und Reels – wie du sie kennst, nur ohne Abo. Und dazu etwas, das kein anderes Premiere-Plugin kann: Bei Musik trennt es erst den Gesang vom Instrumental. Dann sitzt jedes Wort.</p>
+    <div class="hero-ctas">
+      <!-- TODO: Download-Link (GitHub Release), Kauf-Link (Lemon Squeezy) -->
+      <a class="btn btn--loud" href="#preis">Kostenlos laden <span class="sub">· kein Konto, kein Wasserzeichen</span></a>
+      <a class="btn" href="#musikmodus">Musikmodus ansehen</a>
+    </div>
+    <p class="hero-fine"><b>0&nbsp;€</b> für Shorts &amp; Reels &nbsp;·&nbsp; Pro <b>79&nbsp;€ einmalig</b> – kein Abo</p>
+
+    <!-- Das Herzstück: dieselbe Zeile, links als Mix erkannt, rechts nach der Trennung.
+         Die Zeilen sind erfundene Beispieltexte, keine echten Songtexte. -->
+    <div class="demo" aria-label="Vorher-Nachher-Demo">
+      <div class="screen screen--off">
+        <span class="badge">Normale Erkennung</span>
+        <div class="cap" id="capOff" aria-hidden="true"></div>
+        <div class="wave" id="waveOff" aria-hidden="true"></div>
+      </div>
+      <div class="screen screen--on">
+        <span class="badge">Musikmodus an</span>
+        <div class="cap" id="capOn" aria-hidden="true"></div>
+        <div class="wave" id="waveOn" aria-hidden="true"></div>
+      </div>
+      <div class="demo-caps">
+        <p class="demo-cap">Der fertige Mix: <b>Bruchstücke, falsche Wörter, Lücken.</b></p>
+        <p class="demo-cap">Nur die Stimme: <b>jede Zeile, Wort für Wort, auf den Schlag.</b></p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================================================== Beweis -->
+<section class="proof-band tight" aria-label="Messwerte">
+  <div class="shell">
+    <div class="proof-grid">
+      <div><div class="n">14</div><div class="l">Wörter erkennt Whisper aus dem fertigen Mix – Bruchstücke</div></div>
+      <div><div class="n hot">47</div><div class="l">Wörter nach der Gesangstrennung – der komplette Text</div></div>
+      <div><div class="n">≈&nbsp;1×</div><div class="l">Echtzeit: 20&nbsp;s Audio brauchen rund 22&nbsp;s Trennung, lokal auf der CPU</div></div>
+      <div><div class="n">0</div><div class="l">Uploads. Dein Material verlässt deinen Rechner nie</div></div>
+    </div>
+    <p class="proof-note">Gemessen an ein und demselben 20-Sekunden-Ausschnitt eines realen Musikvideos, beide Durchläufe am selben Rechner mit demselben Whisper-Modell (medium). Kein Labor-Schönwetterwert.</p>
+  </div>
+</section>
+
+<!-- ================================================== Normale Captions -->
+<section id="captions">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>Erst mal das Wichtigste: Es ist ein komplettes Caption-Tool.</h2>
+      <p>Der Musikmodus ist die Besonderheit – die Grundlage darunter ist ein vollwertiges Untertitel-Werkzeug für alles Gesprochene. Podcast-Schnipsel, Interviews, Tutorials, Vlogs: der Alltag, für den du sonst Submagic oder CapCut anwirfst.</p>
+    </div>
+    <div class="steps">
+      <div class="step-card">
+        <div class="k">Erkennung</div>
+        <h3>Whisper, bis Large-v3</h3>
+        <p>Dieselben Modelle, mit denen die großen Web-Dienste arbeiten – nur eben bei dir. 29 Sprachen, automatisch erkannt, volle Qualität auch in der Free-Version.</p>
+      </div>
+      <div class="step-card">
+        <div class="k">Korrektur</div>
+        <h3>Klick aufs Wort, tippen, fertig</h3>
+        <p>Unsichere Wörter sind markiert. Enter übernimmt, Tab springt zum nächsten – ein 60-Sekunden-Reel ist in unter einer Minute sauber.</p>
+      </div>
+      <div class="step-card">
+        <div class="k">Ergebnis</div>
+        <h3>Bildgenau wie die Vorschau</h3>
+        <p>Vorschau und Render nutzen exakt dieselbe Zeichenroutine. Was du im Panel siehst, liegt hinterher pixelgleich als transparenter Clip über deinem Schnitt.</p>
+      </div>
+    </div>
+    <p style="margin:22px 0 0"><a href="auto-captions.html" style="color:var(--caption);font-weight:600">Alles zu den Auto-Captions für Sprache&nbsp;→</a></p>
+  </div>
+</section>
+
+<!-- ================================================== Musikmodus -->
+<section id="musikmodus">
+  <div class="shell split">
+    <div class="txt">
+      <div class="sec-head" style="margin-bottom:0">
+        <h2>Warum alle anderen an Musik scheitern</h2>
+      </div>
+      <p>Spracherkennung ist auf <b>gesprochene Sprache</b> trainiert. Liegt ein Beat unter der Stimme, hört sie Schlagzeug statt Konsonanten – und rät. Deshalb steht in jedem Ratgeber derselbe Satz: Songtexte bitte von Hand eintippen.</p>
+      <p>WordBeat macht vorher einen Schritt, den kein anderes Premiere-Plugin macht: Ein zweites neuronales Netz (Demucs, von Meta als Open Source veröffentlicht) <b>zerlegt den Mix in Gesang und Instrumental</b> – lokal, auf deiner CPU. Die Erkennung bekommt nur noch die Stimme. Aus Raten wird Lesen.</p>
+      <p>Es gibt Web-Dienste, die das können – gegen Upload, Abo und Warteschlange. <b>Auf der Premiere-Timeline, ohne dass eine Datei den Rechner verlässt, ist es dieses Plugin allein.</b></p>
+    </div>
+    <div class="stems" aria-hidden="true">
+      <div class="stem">
+        <span class="name">Dein Mix</span>
+        <span class="bars" data-bars="mix"></span>
+        <span class="tag">Stimme + Drums + Bass + Synths übereinander</span>
+      </div>
+      <div class="stem stem--vocals">
+        <span class="name">Gesang</span>
+        <span class="bars" data-bars="vocals"></span>
+        <span class="tag"><b>→ nur das hört die Erkennung</b></span>
+      </div>
+      <div class="stem">
+        <span class="name">Instrumental</span>
+        <span class="bars" data-bars="inst"></span>
+        <span class="tag">wird für die Untertitel ignoriert</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== Ablauf -->
+<section id="ablauf" class="tight">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>Drei Klicks, keine Uploads</h2>
+      <p>Das Plugin läuft als Panel direkt in Premiere. Kein Export, kein Browser-Tab, kein Reimport.</p>
+    </div>
+    <div class="steps">
+      <div class="step-card">
+        <div class="vid">Video folgt · 8 s</div>
+        <div class="k">Schritt 1</div>
+        <h3>Sequenz transkribieren</h3>
+        <p>Sprache wird automatisch erkannt – 29 Sprachen. Bei Musik: Häkchen bei „Musik / Gesang“, den Rest macht das Plugin.</p>
+      </div>
+      <div class="step-card">
+        <div class="vid">Video folgt · 8 s</div>
+        <div class="k">Schritt 2</div>
+        <h3>Stil einstellen, live sehen</h3>
+        <p>Deine Schriften, deine Farben, Wort-für-Wort-Animation. Die Vorschau ist bildgenau das, was gerendert wird. Jedes Wort per Klick korrigierbar.</p>
+      </div>
+      <div class="step-card">
+        <div class="vid">Video folgt · 8 s</div>
+        <div class="k">Schritt 3</div>
+        <h3>Auf die Timeline</h3>
+        <p>Die Captions landen als transparenter Clip über deinem Schnitt. Dein Material wird nie neu gerendert oder angefasst.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== Stile -->
+<section id="stile">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>Stile, die man aus dem Feed kennt</h2>
+      <p>Alle Vorlagen sind voll anpassbar: Schrift, Größe, Farben, Position, Wörter pro Einblendung, Hintergrundfläche.</p>
+    </div>
+    <div class="styles-grid">
+      <div class="style-tile">
+        <div class="demo-line"><span>WORT</span><span class="w-act">FÜR</span><span>WORT</span></div>
+        <span class="lab">Pop</span>
+      </div>
+      <div class="style-tile">
+        <div class="demo-line"><span class="w-fill">FÜLLT</span><span class="w-fill">SICH</span><span>BEIM</span><span>SINGEN</span></div>
+        <span class="lab">Karaoke</span>
+      </div>
+      <div class="style-tile">
+        <div class="demo-line one-word"><span class="w-act">KNALLT</span></div>
+        <span class="lab">Ein Wort</span>
+      </div>
+      <div class="style-tile">
+        <div class="demo-line"><span>WORT</span><span class="w-box">AUF</span><span>BALKEN</span></div>
+        <span class="lab">Box</span>
+        <span class="pro-chip">Pro</span>
+      </div>
+      <div class="style-tile">
+        <div class="demo-line w-pill-line"><span>Sanft</span><span class="w-act2">und</span><span>rund</span></div>
+        <span class="lab">Pille</span>
+        <span class="pro-chip">Pro</span>
+      </div>
+      <div class="style-tile">
+        <div class="demo-line" style="opacity:.92"><span>SCHLICHT</span><span>OHNE</span><span>ZIRKUS</span></div>
+        <span class="lab">Einblenden</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== Preis -->
+<section id="preis" class="pricing">
+  <div class="shell">
+    <div class="sec-head center">
+      <h2>Einmal zahlen. Nicht jeden Monat.</h2>
+      <p>Alles rechnet auf deinem Rechner – uns entstehen keine Serverkosten pro Video. Deshalb wäre ein Abo unverschämt.</p>
+    </div>
+
+    <div class="tiers">
+      <div class="tier">
+        <div class="t-name">Free</div>
+        <div class="t-price">0&nbsp;€</div>
+        <ul>
+          <li>Volle Erkennungsqualität – alle Modelle bis Large-v3</li>
+          <li>29 Sprachen, automatische Erkennung</li>
+          <li>3 Caption-Stile, voll anpassbar</li>
+          <li>Videos bis 10 Minuten</li>
+          <li>Kein Wasserzeichen, kein Konto</li>
+        </ul>
+        <!-- TODO: GitHub-Release-Link -->
+        <a class="btn" href="#">Herunterladen <span class="sub">· 163 MB</span></a>
+        <div class="t-fine">Für Shorts, Reels und TikTok reicht Free dauerhaft.</div>
+      </div>
+
+      <div class="tier tier--lead">
+        <div class="t-name">Pro</div>
+        <div class="t-price">79&nbsp;€ <small>einmalig · 2 Rechner</small></div>
+        <ul>
+          <li><b>Musikmodus – Songtexte aus dem fertigen Mix</b></li>
+          <li>Alle Caption-Stile</li>
+          <li>Unbegrenzte Videolänge</li>
+          <li>E-Mail-Support</li>
+          <li>2 Jahre Updates, danach läuft deine Version für immer</li>
+          <li class="soon">Pausen- &amp; Stilleschnitt <span class="chip">in Arbeit</span></li>
+          <li class="soon">Sanfter KI-Check der Texte <span class="chip">in Arbeit</span></li>
+          <li class="soon">SRT-Export &amp; -Import <span class="chip">in Arbeit</span></li>
+        </ul>
+        <!-- TODO: Lemon-Squeezy-Checkout-Link -->
+        <a class="btn btn--loud" href="#">Pro kaufen</a>
+        <div class="t-fine">14 Tage Geld zurück, ohne Begründung.</div>
+      </div>
+
+      <div class="tier">
+        <div class="t-name">Studio</div>
+        <div class="t-price">299&nbsp;€ <small>einmalig · 5 Plätze</small></div>
+        <ul>
+          <li>Alles aus Pro</li>
+          <li>Rechnung auf Firma</li>
+          <li>Support mit Vorrang</li>
+          <li>Stilvorlagen im Team teilen <span class="chip" style="font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--vocal);border:1px solid rgba(169,139,255,.4);border-radius:999px;padding:1px 7px;margin-left:6px">in Arbeit</span></li>
+        </ul>
+        <!-- TODO: Lemon-Squeezy-Checkout-Link -->
+        <a class="btn" href="#">Studio kaufen</a>
+        <div class="t-fine">Mehr Plätze? Schreib uns.</div>
+      </div>
+    </div>
+
+    <div class="compare">
+      <h3>Was Untertitel über drei Jahre kosten</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr><th>Anbieter</th><th>Modell</th><th class="num">3 Jahre</th><th>Songtexte aus dem Mix</th><th>Läuft ohne Upload</th></tr>
+          </thead>
+          <tbody>
+            <tr class="self"><td>WordBeat Pro</td><td>79&nbsp;€ einmalig</td><td class="num">79&nbsp;€</td><td class="t-yes">ja</td><td class="t-yes">ja</td></tr>
+            <tr><td>PremiereCopilot Pro+</td><td>7,99&nbsp;$/Monat</td><td class="num">287&nbsp;$*</td><td class="t-no">nein</td><td class="t-yes">ja</td></tr>
+            <tr><td>Captioneer</td><td>15&nbsp;$/Monat o. 150&nbsp;$ Lifetime</td><td class="num">150–540&nbsp;$</td><td class="t-no">nein</td><td class="t-yes">ja</td></tr>
+            <tr><td>Submagic</td><td>Abo</td><td class="num">ab&nbsp;360&nbsp;$*</td><td class="t-no">nein</td><td class="t-no">Web-Upload</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="tbl-fine">Preise laut den Websites der Anbieter, Stand 31.&nbsp;Juli 2026. *Jahresangaben aus der Vergleichstabelle von PremiereCopilot übernommen – vor Veröffentlichung dieser Seite selbst nachprüfen.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== Privat, klein -->
+<section class="quiet-strip tight" aria-label="Datenschutz">
+  <div class="shell">
+    <h2>Nebenbei: Es funktioniert im Flugzeug.</h2>
+    <p>Transkription, Gesangstrennung, Rendern – alles läuft auf deinem Rechner. Kein Konto, keine Cloud, keine Warteschlange. Internet braucht es genau einmal: für den Modell-Download beim ersten Start. Für NDA-Material ist das keine Fußnote, sondern die Voraussetzung.</p>
+  </div>
+</section>
+
+<!-- ================================================== Sprachen -->
+<section class="tight" id="sprachen">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>29 Sprachen, automatisch erkannt</h2>
+      <p>Auch von rechts nach links: Arabisch und Hebräisch werden korrekt angeordnet – in Leserichtung, Wort für Wort.</p>
+    </div>
+    <div class="langs">
+      <span>Deutsch</span><span>English</span><span>Español</span><span>Français</span><span>Italiano</span><span>Português</span><span>Nederlands</span><span>Polski</span><span>Türkçe</span><span>Русский</span><span>Українська</span><span>العربية</span><span>עברית</span><span>हिन्दी</span><span>日本語</span><span>한국어</span><span>中文</span><span>Svenska</span><span>Dansk</span><span>Norsk</span><span>Suomi</span><span>Čeština</span><span>Ελληνικά</span><span>Magyar</span><span>Română</span><span>Bahasa Indonesia</span><span>Tiếng Việt</span><span>ไทย</span><span>...</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== Fahrplan -->
+<section class="tight" id="fahrplan">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>Was es kann – und was als Nächstes kommt</h2>
+      <p>Wir versprechen nichts, was es nicht gibt. Das hier ist der ehrliche Stand.</p>
+    </div>
+    <div class="roadmap">
+      <div class="rm"><span class="st now">Jetzt</span><h3>Wort-für-Wort-Captions</h3><p>Transkription, Live-Vorschau, Korrigieren, Rendern auf die Timeline.</p></div>
+      <div class="rm"><span class="st now">Jetzt</span><h3>Musikmodus</h3><p>Gesangstrennung lokal, Songtexte aus dem fertigen Mix.</p></div>
+      <div class="rm"><span class="st now">Jetzt</span><h3>Panel in 10 Sprachen</h3><p>Folgt automatisch der Sprache deines Premiere.</p></div>
+      <div class="rm"><span class="st next">In Arbeit</span><h3>Pausen- &amp; Stilleschnitt</h3><p>Totzeit erkennen und auf Wunsch aus der Sequenz schneiden.</p></div>
+      <div class="rm"><span class="st next">In Arbeit</span><h3>Sanfter KI-Check</h3><p>Namen, Zeichensetzung, Fachbegriffe – lokal geprüft, nie umgeschrieben.</p></div>
+      <div class="rm"><span class="st next">In Arbeit</span><h3>SRT rein und raus</h3><p>Fertige Transkripte importieren, Untertitel als Datei exportieren.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== FAQ -->
+<section id="faq">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>Ehrliche Antworten auf echte Fragen</h2>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Warum warnt Windows beim Installieren?</summary>
+        <div class="a"><p>Windows zeigt bei jeder neuen, noch wenig verbreiteten Installationsdatei eine SmartScreen-Warnung. Über „Weitere Informationen → Trotzdem ausführen“ geht es weiter. Eine signierte Fassung ist in Arbeit – das Zertifikat dafür ist beantragt.</p></div>
+      </details>
+      <details>
+        <summary>Läuft es auf dem Mac?</summary>
+        <div class="a"><p>Noch nicht. Aktuell Windows 10/11 mit Premiere Pro 2023 oder neuer. Eine Mac-Fassung steht auf der Liste, aber wir nennen kein Datum, das wir nicht halten können.</p></div>
+      </details>
+      <details>
+        <summary>Wie gut ist der Musikmodus wirklich?</summary>
+        <div class="a"><p>An unserem Referenzclip: 14 erkannte Wörter ohne, 47 mit Trennung – der komplette Text. Am besten funktioniert es bei klar gesungenem Pop, Rap und Singer-Songwriter-Material. Bei Metal-Growls oder extrem dichten Mixen stößt auch die Trennung an Grenzen. Deshalb: erst mit der Free-Version das Sprachmaterial testen, dann kaufen.</p></div>
+      </details>
+      <details>
+        <summary>Was passiert nach den 2 Jahren Updates?</summary>
+        <div class="a"><p>Deine Version läuft unverändert weiter, für immer. Du verlierst nichts – du bekommst nur keine neuen Funktionen mehr, bis du irgendwann freiwillig auf eine neue Hauptversion umsteigst (mit Rabatt für Bestandskunden).</p></div>
+      </details>
+      <details>
+        <summary>Bekomme ich mein Geld zurück?</summary>
+        <div class="a"><p>14 Tage, ohne Begründung, per E-Mail. Wir wollen keine Kunden, die sich geärgert haben.</p></div>
+      </details>
+      <details>
+        <summary>Werden meine Videos hochgeladen?</summary>
+        <div class="a"><p>Nein. Es gibt keinen Server, zu dem sie hochgeladen werden könnten. Die einzige Internetverbindung ist der einmalige Download der KI-Modelle beim ersten Start (~1,5 GB Sprache, ~80 MB Trennung).</p></div>
+      </details>
+      <details>
+        <summary>Premiere hat doch eigene Untertitel – warum das hier?</summary>
+        <div class="a"><p>Premieres Transkription ist gut für gesprochene Sprache und nüchterne Untertitel. Sie kann keine Wort-für-Wort-Animationen im Social-Stil, und an Musik scheitert sie wie alle anderen. WordBeat ergänzt genau diese zwei Lücken.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== Schluss -->
+<section class="outro">
+  <div class="shell">
+    <h2>Der nächste Songtext tippt sich von selbst.</h2>
+    <div class="hero-ctas">
+      <!-- TODO: Download-Link -->
+      <a class="btn btn--loud" href="#preis">Kostenlos laden</a>
+      <a class="btn" href="#musikmodus">Erst den Beweis ansehen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== Fuß -->
+<footer>
+  <div class="shell">
+    <div class="col">
+      <b>WordBeat</b>
+      <a href="auto-captions.html">Auto-Captions für Sprache</a>
+      <a href="#musikmodus">Musikmodus</a>
+      <a href="#preis">Preis</a>
+      <a href="#fahrplan">Fahrplan</a>
+    </div>
+    <div class="col">
+      <b>Hilfe</b>
+      <a href="#faq">Fragen &amp; Antworten</a>
+      <!-- TODO: echte Support-Adresse der Domain -->
+      <a href="mailto:support@DEINE-DOMAIN.de">support@DEINE-DOMAIN.de</a>
+    </div>
+    <div class="col">
+      <b>Rechtliches</b>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+    <p class="fine">Adobe und Premiere Pro sind Marken von Adobe Inc. Dieses Plugin ist ein unabhängiges Produkt und steht in keiner Verbindung zu Adobe. Spracherkennung: Whisper (OpenAI, MIT-Lizenz) · Gesangstrennung: Demucs (Meta AI Research, MIT-Lizenz) – beide laufen lokal.</p>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   Hero-Demo: dieselbe Zeile zweimal.
+   Links (Mix): Bruchstücke mit Lücken und Fehlern.
+   Rechts (Musikmodus): vollständige Zeilen, Wort für Wort,
+   das aktive Wort gelb – exakt wie im Plugin.
+   Die Texte sind erfunden, keine echten Songzeilen.
+   ============================================================ */
+(function () {
+    var LINES = [
+        ["DIE", "NACHT", "GEHÖRT", "UNS", "BEIDEN"],
+        ["LAUTER", "ALS", "MEIN", "HERZSCHLAG"],
+        ["ICH", "SCHREIB", "ES", "AN", "DIE", "WÄNDE"]
+    ];
+    /* Was die normale Erkennung aus dem Mix macht: pro Zeile nur Fetzen. */
+    var BROKEN = [
+        [null, "NACHT", null, null, "LEIDEN?"],
+        [null, null, null, "HERZ—"],
+        [null, "TREIBT", null, null, null, null]
+    ];
+
+    var capOn = document.getElementById("capOn");
+    var capOff = document.getElementById("capOff");
+    if (!capOn || !capOff) { return; }
+
+    var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function renderLine(el, words, activeIndex, brokenMask) {
+        el.innerHTML = "";
+        words.forEach(function (w, i) {
+            var s = document.createElement("span");
+            if (brokenMask) {
+                var b = brokenMask[i];
+                if (b === null) {
+                    s.textContent = "···";
+                    s.className = "miss";
+                } else {
+                    s.textContent = b;
+                    if (i > activeIndex) { s.className = "ghost"; }
+                }
+            } else {
+                s.textContent = w;
+                if (i === activeIndex) { s.className = "active"; }
+                else if (i > activeIndex) { s.className = "ghost"; }
+            }
+            el.appendChild(s);
+        });
+    }
+
+    if (reduced) {
+        renderLine(capOn, LINES[0], 2, null);
+        renderLine(capOff, LINES[0], LINES[0].length, BROKEN[0]);
+        return;
+    }
+
+    var line = 0, word = 0;
+    function tick() {
+        var words = LINES[line];
+        renderLine(capOn, words, word, null);
+        renderLine(capOff, words, word, BROKEN[line]);
+        word++;
+        if (word >= words.length) {
+            word = 0;
+            line = (line + 1) % LINES.length;
+            window.setTimeout(tick, 900);   /* kurze Pause zwischen Zeilen */
+            return;
+        }
+        window.setTimeout(tick, 430);       /* Sprechtempo */
+    }
+    tick();
+})();
+
+/* Wellenformen: Mix voll, Gesang nur dort, wo "gesungen" wird. */
+(function () {
+    function fill(id, kind) {
+        var el = document.getElementById(id);
+        if (!el) { return; }
+        for (var i = 0; i < 48; i++) {
+            var bar = document.createElement("i");
+            var h;
+            if (kind === "mix") { h = 20 + Math.abs(Math.sin(i * 1.7)) * 70; }
+            else { h = (i % 9 < 5) ? 15 + Math.abs(Math.sin(i * 2.3)) * 75 : 6; }
+            bar.style.height = h + "%";
+            el.appendChild(bar);
+        }
+    }
+    fill("waveOff", "mix");
+    fill("waveOn", "voc");
+
+    /* Balken der drei Spuren im Musikmodus-Abschnitt */
+    document.querySelectorAll("[data-bars]").forEach(function (wrap) {
+        var kind = wrap.getAttribute("data-bars");
+        for (var i = 0; i < 34; i++) {
+            var bar = document.createElement("i");
+            var h;
+            if (kind === "mix") { h = 25 + Math.abs(Math.sin(i * 1.3) * Math.cos(i * .7)) * 70; }
+            else if (kind === "vocals") { h = (i % 8 < 5) ? 20 + Math.abs(Math.sin(i * 2.1)) * 75 : 8; }
+            else { h = 20 + Math.abs(Math.cos(i * 1.9)) * 55; }
+            bar.style.height = h + "%";
+            wrap.appendChild(bar);
+        }
+    });
+})();
+</script>
+</body>
+</html>
