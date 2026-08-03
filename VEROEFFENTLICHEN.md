@@ -15,13 +15,13 @@ Suche in allen Dateien nach diesen Markierungen:
 
 ## Veröffentlichen mit GitHub Pages
 
-1. **Repository anlegen** auf github.com (z. B. `wordbeat-website`,
+1. **Repository anlegen** auf github.com (z. B. `capbeat-website`,
    öffentlich). Nur den Inhalt DIESES Ordners hineinlegen — nicht das
    ganze Plugin-Projekt.
 2. **Pages einschalten:** Repository → Settings → Pages →
    Source: „Deploy from a branch“ → Branch `main`, Ordner `/ (root)`.
    Nach 1–2 Minuten ist die Seite unter
-   `https://BENUTZERNAME.github.io/wordbeat-website/` erreichbar.
+   `https://BENUTZERNAME.github.io/capbeat-website/` erreichbar.
 3. **Eigene Domain** (dringend empfohlen, ~10 €/Jahr, z. B. bei INWX,
    Namecheap oder Cloudflare):
    - Beim Domain-Anbieter vier A-Records auf GitHubs Adressen setzen:
