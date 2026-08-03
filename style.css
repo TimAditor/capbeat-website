@@ -372,7 +372,7 @@ h2 {
     position: relative;
 }
 .tier--lead::before {
-    content: "Für Musikvideos";
+    content: "For music videos";
     position: absolute; top: -11px; left: 22px;
     font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
     background: var(--caption); color: var(--caption-ink);

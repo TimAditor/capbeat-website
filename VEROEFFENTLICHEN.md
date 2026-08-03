@@ -9,7 +9,7 @@ Suche in allen Dateien nach diesen Markierungen:
 
 | Markierung | Wo | Was tun |
 |---|---|---|
-| `DEINE-DOMAIN.de` | index.html, robots.txt, sitemap.xml | durch die echte Domain ersetzen |
+| `YOUR-DOMAIN.com` | index.html, robots.txt, sitemap.xml | durch die echte Domain ersetzen |
 | `TODO` | index.html (7×) | Download-/Kauf-Links eintragen |
 | `[PLATZHALTER]`-Blöcke | impressum.html, datenschutz.html | **Pflichtangaben** — ohne Impressum drohen in Deutschland Abmahnungen |
 
