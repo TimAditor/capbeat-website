@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Download CapBeat – your download is starting</title>
+<!-- Post-checkout page: people land here from Lemon Squeezy.
+     Not meant to be found via Google, hence noindex. -->
+<meta name="robots" content="noindex, follow" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="shell">
+    <a class="brand" href="index.html"><span class="mark">C</span>Cap<b>Beat</b></a>
+    <div class="nav-links">
+      <a href="index.html#music-mode">Music Mode</a>
+      <a href="index.html#faq">FAQ</a>
+    </div>
+  </div>
+</nav>
+
+<main class="legal" style="padding-top:80px">
+  <div class="shell">
+    <div class="eyebrow">Thank you!</div>
+    <h1 style="font-family:var(--display);letter-spacing:-.02em;margin:0">Your download is starting&hellip;</h1>
+    <p>If nothing happens within a few seconds, use the button below.
+       You'll also find the download link in the email you just received.</p>
+    <p style="margin-top:6px">
+      <a class="btn btn--loud" id="dlBtn"
+         href="https://github.com/TimAditor/capbeat-website/releases/latest/download/CapBeat-Setup.exe">
+         Download CapBeat-Setup.exe <span class="sub">· 163&nbsp;MB · Windows</span></a>
+    </p>
+
+    <div class="steps" style="margin-top:36px">
+      <div class="step-card">
+        <div class="k">Step 1</div>
+        <h3>Run the installer</h3>
+        <p>Windows may show a SmartScreen warning — that's normal for new
+           installers. Click <b>More info</b>, then <b>Run anyway</b>.</p>
+      </div>
+      <div class="step-card">
+        <div class="k">Step 2</div>
+        <h3>Open it in Premiere Pro</h3>
+        <p>Start Premiere Pro, then go to
+           <b>Window&nbsp;&rarr;&nbsp;Extensions&nbsp;&rarr;&nbsp;CapBeat</b>.
+           On first start the plugin downloads its AI model once — after that
+           everything runs offline.</p>
+      </div>
+      <div class="step-card">
+        <div class="k">Bought Pro?</div>
+        <h3>Activate your license</h3>
+        <p>Your license key arrives by email right after checkout. Paste it
+           into the <b>License</b> card in the CapBeat panel and click
+           <b>Activate</b> — music mode and the Pro styles unlock instantly.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:28px">Questions or trouble installing? Just reply to the
+       email or write to <a href="mailto:help@getcapbeat.com">help@getcapbeat.com</a>.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="shell">
+    <div class="col">
+      <b>CapBeat</b>
+      <a href="index.html">Home</a>
+      <a href="auto-captions.html">Auto captions for speech</a>
+    </div>
+    <div class="col">
+      <b>Help</b>
+      <a href="index.html#faq">FAQ</a>
+      <a href="mailto:help@getcapbeat.com">help@getcapbeat.com</a>
+    </div>
+    <div class="col">
+      <b>Legal</b>
+      <a href="impressum.html">Imprint (Impressum)</a>
+      <a href="datenschutz.html">Privacy policy</a>
+    </div>
+    <p class="fine">Adobe and Premiere Pro are trademarks of Adobe Inc. This plugin is an independent product and is not affiliated with Adobe.</p>
+  </div>
+</footer>
+
+<script>
+/* Kick off the download automatically after a short moment, so the
+   button is only the fallback. */
+setTimeout(function () {
+  var a = document.getElementById("dlBtn");
+  if (a) { window.location.href = a.href; }
+}, 1200);
+</script>
+</body>
+</html>
