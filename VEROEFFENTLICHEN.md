@@ -46,6 +46,17 @@ EXE als Anhang hochladen - WICHTIG: als "CapBeat-Setup.exe" OHNE Versionsnummer,
 Genau diesen Link in die „Herunterladen“-Knöpfe der index.html eintragen —
 `releases/latest` zeigt automatisch immer auf die neueste Version.
 
+### Checkliste für jedes neue Release
+
+1. `SP.VERSION` in `client/js/update.js` anheben (Panel-Kopf liest sie mit)
+2. `#define Version` in `build/installer.iss` anheben, Installer bauen
+3. GitHub-Release mit Tag `vX.Y.Z` anlegen, EXE als **CapBeat-Setup.exe** anhängen
+4. **`version.json` im Website-Repo auf die neue Nummer setzen und pushen** —
+   daraus speisen sich die „Neue Version ist da“-Hinweise in allen
+   installierten Panels. Vergisst man diesen Schritt, erfährt niemand vom
+   Update; trägt man ihn zu früh ein, führt der Hinweis zu einer alten EXE.
+   Also: immer NACH dem Hochladen der EXE pushen.
+
 ## Was GitHub Pages NICHT kann — und die Lösung
 
 Pages liefert nur statische Dateien aus. Bezahlung läuft deshalb über

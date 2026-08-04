@@ -483,3 +483,10 @@ footer .fine { width: 100%; margin-top: 10px; font-size: 12.5px; color: var(--mu
     border: 1px dashed var(--bad); border-radius: 9px; padding: 14px 18px;
     color: var(--bad); font-size: 14.5px;
 }
+/* Hinweis auf der Download-Seite, wenn jemand mit einem Mac kommt */
+.macnote {
+    border: 1px solid rgba(255, 225, 77, .4);
+    background: rgba(255, 225, 77, .07);
+    border-radius: 9px; padding: 14px 18px; font-size: 14.5px;
+}
+.macnote[hidden] { display: none; }

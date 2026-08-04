@@ -26,7 +26,8 @@
     <div class="eyebrow">Thank you!</div>
     <h1 style="font-family:var(--display);letter-spacing:-.02em;margin:0">Your download is starting&hellip;</h1>
     <p>If nothing happens within a few seconds, use the button below.
-       You'll also find the download link in the email you just received.</p>
+       You'll also find the download link in the email you just received.
+       CapBeat runs on <b>Windows 10/11</b> with Premiere Pro 2023 or newer.</p>
     <p style="margin-top:6px">
       <a class="btn btn--loud" id="dlBtn"
          href="https://github.com/TimAditor/capbeat-website/releases/latest/download/CapBeat-Setup.exe">
@@ -57,6 +58,12 @@
       </div>
     </div>
 
+    <p class="macnote" id="macNote" hidden>
+       <b>Heads up — you appear to be on a Mac.</b> This installer is Windows-only
+       and will not open on macOS. A Mac build is being worked on;
+       <a href="mailto:help@getcapbeat.com?subject=Notify%20me%20about%20the%20Mac%20version">email us</a>
+       and we'll tell you the day it ships.</p>
+
     <p style="margin-top:28px">Questions or trouble installing? Just reply to the
        email or write to <a href="mailto:help@getcapbeat.com">help@getcapbeat.com</a>.</p>
   </div>
@@ -84,12 +91,20 @@
 </footer>
 
 <script>
-/* Kick off the download automatically after a short moment, so the
-   button is only the fallback. */
-setTimeout(function () {
-  var a = document.getElementById("dlBtn");
-  if (a) { window.location.href = a.href; }
-}, 1200);
+/* Mac visitors would download an installer that cannot run. Warn them
+   and skip the auto-download; the button stays available either way. */
+var aufMac = /Mac|iPhone|iPad/i.test(navigator.platform || navigator.userAgent);
+
+if (aufMac) {
+  document.getElementById("macNote").hidden = false;
+} else {
+  /* Kick off the download automatically after a short moment, so the
+     button is only the fallback. */
+  setTimeout(function () {
+    var a = document.getElementById("dlBtn");
+    if (a) { window.location.href = a.href; }
+  }, 1200);
+}
 </script>
 </body>
 </html>
