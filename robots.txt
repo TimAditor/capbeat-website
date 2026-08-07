@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://timaditor.github.io/capbeat-website/sitemap.xml
+Sitemap: https://getcapbeat.com/sitemap.xml
