@@ -63,14 +63,14 @@ Pages liefert nur statische Dateien aus. Bezahlung läuft deshalb über
 einen Anbieter, der als Verkäufer auftritt (Merchant of Record) und
 EU-Umsatzsteuer, Rechnungen und Rückerstattungen übernimmt:
 
-- **Lemon Squeezy** oder **Paddle** — Produkt anlegen, den fertigen
-  Checkout-Link in die „Pro kaufen“-Knöpfe eintragen. Fertig; die Seite
-  selbst braucht dafür keinerlei Code.
+- **Polar** (seit 8/2026; davor Lemon Squeezy, dort wurde der Store
+  gesperrt) — Produkt anlegen, den fertigen Checkout-Link in die
+  „Pro kaufen“-Knöpfe eintragen. Fertig; die Seite selbst braucht dafür
+  keinerlei Code.
 
-**Aber:** Erst verkaufen, wenn (1) die EXE signiert ist und (2) das Plugin
-eine Lizenzprüfung hat. Beides existiert noch nicht — bis dahin die
-Kauf-Knöpfe durch „Bald verfügbar“ ersetzen oder die Preissektion
-ausblenden.
+Die Lizenzprüfung im Plugin läuft ebenfalls gegen Polar
+(client/js/license.js). Offen bleibt nur noch die Signatur der EXE
+(SmartScreen-Warnung).
 
 ## Noch offen für die fertige Seite
 
