@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Drop-in Object Animations for Premiere Pro – Fly-ins Without Keyframes | CapBeat</title>
+<meta name="description" content="Animate any logo, graphic or clip in Adobe Premiere Pro with one click: fly-ins, pops, drops with bounce, spins — 19 animations with real easing and true motion blur, no keyframing." />
+<link rel="canonical" href="https://timaditor.github.io/capbeat-website/animations.html" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Drop-in Object Animations for Premiere Pro – No Keyframes" />
+<meta property="og:description" content="Select a clip, pick an animation, done: 19 fly-ins, pops and bounces with real easing and true motion blur — applied as normal keyframes you can still edit." />
+<meta property="og:url" content="https://timaditor.github.io/capbeat-website/animations.html" />
+<meta property="og:image" content="https://timaditor.github.io/capbeat-website/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="stylesheet" href="style.css" />
+<style>
+/* Kleine Bühne für die Live-Demo dieser Seite */
+.anim-stage {
+    position: relative;
+    max-width: 640px;
+    height: 240px;
+    margin: 34px auto 0;
+    background: var(--bg-inset, #131018);
+    border: 1px solid var(--line, #383043);
+    border-radius: 14px;
+    overflow: hidden;
+}
+.anim-stage .obj {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--caption, #ffe14d);
+    color: #1a1608;
+    font-weight: 800;
+    letter-spacing: .02em;
+    padding: 14px 26px;
+    border-radius: 10px;
+    white-space: nowrap;
+    will-change: transform, opacity;
+}
+.anim-stage .tag {
+    position: absolute;
+    left: 12px; top: 10px;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-soft, #8d8599);
+}
+.anim-name {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--ink-soft, #8d8599);
+}
+.anim-name b { color: var(--caption, #ffe14d); }
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="shell">
+    <a class="brand" href="index.html"><span class="mark">C</span>Cap<b>Beat</b></a>
+    <div class="nav-links">
+      <a href="auto-captions.html">Auto Captions</a>
+      <a href="index.html#music-mode">Music Mode</a>
+      <a href="index.html#pricing">Pricing</a>
+    </div>
+    <a class="btn btn--loud btn--small cta" href="index.html#pricing">Download free</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="shell">
+    <div class="eyebrow">For logos, stickers, lower thirds, screenshots — any clip on your timeline</div>
+    <h1>Fly-ins without <span class="hl">keyframes</span>.</h1>
+    <p class="lede">Place your object where it should end up, click it, pick an animation — CapBeat writes the keyframes for you. Real easing curves, real motion blur, and everything stays editable in Effect Controls afterwards.</p>
+    <div class="hero-ctas">
+      <a class="btn btn--loud" href="index.html#pricing">Download free <span class="sub">· 5 animations included</span></a>
+      <a class="btn" href="#catalog">See all 19 animations</a>
+    </div>
+
+    <div class="anim-stage" aria-hidden="true">
+      <span class="tag">Live demo</span>
+      <div class="obj" id="animObj">YOUR LOGO</div>
+    </div>
+    <div class="anim-name" id="animName">Fly in · <b>from the left</b></div>
+  </div>
+</header>
+
+<section class="proof-band tight" aria-label="Key facts">
+  <div class="shell">
+    <div class="proof-grid">
+      <div><div class="n hot">19</div><div class="l">animations — fly-ins, gentle slides, pops, whips, spins, drops</div></div>
+      <div><div class="n">1</div><div class="l">click to apply — the panel sets every keyframe with proper easing</div></div>
+      <div><div class="n">0</div><div class="l">changes to your media: just normal Position &amp; Opacity keyframes, editable any time</div></div>
+      <div><div class="n">240°</div><div class="l">shutter angle — true motion blur via Premiere's Transform effect, set up automatically</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="how-it-works">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>Three clicks, honestly</h2>
+      <p>No new file formats, no rendering — the animation lives on your own clip as regular keyframes.</p>
+    </div>
+    <div class="steps">
+      <div class="step-card">
+        <div class="k">Step 1</div>
+        <h3>Place &amp; select</h3>
+        <p>Put your logo, graphic or clip exactly where it should end up. Click it in the timeline.</p>
+      </div>
+      <div class="step-card">
+        <div class="k">Step 2</div>
+        <h3>Pick an animation</h3>
+        <p>Grouped menu: fade ins, fly ins, pops with overshoot, whips, diagonals, spins, a drop with bounce. Set the duration with one slider.</p>
+      </div>
+      <div class="step-card">
+        <div class="k">Step 3</div>
+        <h3>Apply</h3>
+        <p>CapBeat writes densely sampled keyframes with real easing — fast in, natural settle. Optionally animate out again at the clip's end.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tight" id="catalog">
+  <div class="shell">
+    <div class="sec-head">
+      <h2>The catalog</h2>
+      <p>Five animations are free forever. Pro unlocks the full set — and true motion blur.</p>
+    </div>
+    <div class="roadmap">
+      <div class="rm"><span class="st now">Free</span><h3>Fade in</h3><p>Soft appear in place — the everyday workhorse.</p></div>
+      <div class="rm"><span class="st now">Free</span><h3>Fly in — 4 directions</h3><p>From left, right, top or bottom, with a smooth ease-out landing.</p></div>
+      <div class="rm"><span class="st next">Pro</span><h3>Gentle slides</h3><p>Short move plus fade — the elegant lower-third look, in 4 directions.</p></div>
+      <div class="rm"><span class="st next">Pro</span><h3>Pop with overshoot</h3><p>Swings slightly past the target and snaps back — 4 directions.</p></div>
+      <div class="rm"><span class="st next">Pro</span><h3>Whip ins</h3><p>Extra fast with a strong overshoot — for punchy YouTube edits.</p></div>
+      <div class="rm"><span class="st next">Pro</span><h3>Diagonals, spin, drop &amp; bounce</h3><p>Corner fly-ins, a rotating entrance, and a drop that lands like a ball.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quiet-strip tight">
+  <div class="shell">
+    <h2>Real motion blur, not a fake</h2>
+    <p>Position keyframes alone can't blur in Premiere. CapBeat uses the same trick editors do by hand: it puts the movement on Premiere's own <b>Transform effect</b> and opens its shutter angle — automatically. One checkbox, and your fly-ins look like they were filmed, not slid.</p>
+  </div>
+</section>
+
+<section class="quiet-strip tight">
+  <div class="shell">
+    <h2>And it's still a caption tool first</h2>
+    <p>Animations share the panel with word-by-word <a href="auto-captions.html" style="color:var(--caption)">auto captions</a> and the <a href="index.html#music-mode" style="color:var(--caption)">music mode</a> that reads lyrics from a finished mix. One plugin, three jobs.</p>
+  </div>
+</section>
+
+<section class="outro">
+  <div class="shell">
+    <h2>Your next fly-in is one click away.</h2>
+    <div class="hero-ctas">
+      <a class="btn btn--loud" href="index.html#pricing">Download free</a>
+      <a class="btn" href="index.html#pricing">See pricing</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="shell">
+    <div class="col">
+      <b>CapBeat</b>
+      <a href="index.html">Home</a>
+      <a href="auto-captions.html">Auto captions for speech</a>
+      <a href="animations.html">Drop-in animations</a>
+      <a href="index.html#pricing">Pricing</a>
+    </div>
+    <div class="col">
+      <b>Help</b>
+      <a href="index.html#faq">FAQ</a>
+      <a href="mailto:help@getcapbeat.com">help@getcapbeat.com</a>
+    </div>
+    <div class="col">
+      <b>Legal</b>
+      <a href="impressum.html">Imprint (Impressum)</a>
+      <a href="datenschutz.html">Privacy policy</a>
+    </div>
+    <p class="fine">Adobe and Premiere Pro are trademarks of Adobe Inc. This plugin is an independent product and is not affiliated with Adobe.</p>
+  </div>
+</footer>
+
+<script>
+/* Die Bühne spielt den Katalog nach - mit denselben Kurvencharakteren
+   wie im Plugin (weiches Ausrollen, Überschwinger, Nachfedern). */
+(function () {
+    var obj = document.getElementById("animObj");
+    var label = document.getElementById("animName");
+    if (!obj || !label) { return; }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { return; }
+
+    var MITTE = "translate(-50%, -50%)";
+    var SHOWS = [
+        { name: "Fly in · <b>from the left</b>",
+          frames: [{ transform: "translate(-420%, -50%)" }, { transform: MITTE }],
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)", dur: 700 },
+        { name: "Pop · <b>from the bottom</b> <span style='color:var(--caption)'>★ Pro</span>",
+          frames: [{ transform: "translate(-50%, 500%)" }, { transform: MITTE }],
+          easing: "cubic-bezier(0.34, 1.56, 0.64, 1)", dur: 650 },
+        { name: "Whip · <b>from the right</b> <span style='color:var(--caption)'>★ Pro</span>",
+          frames: [{ transform: "translate(360%, -50%)" }, { transform: MITTE }],
+          easing: "cubic-bezier(0.25, 1.9, 0.45, 1)", dur: 520 },
+        { name: "Drop &amp; bounce <span style='color:var(--caption)'>★ Pro</span>",
+          frames: [
+            { transform: "translate(-50%, -420%)", offset: 0 },
+            { transform: MITTE, offset: 0.36 },
+            { transform: "translate(-50%, -110%)", offset: 0.55 },
+            { transform: MITTE, offset: 0.74 },
+            { transform: "translate(-50%, -66%)", offset: 0.86 },
+            { transform: MITTE, offset: 1 }
+          ], easing: "linear", dur: 900 },
+        { name: "Spin in <span style='color:var(--caption)'>★ Pro</span>",
+          frames: [{ transform: "translate(-50%, -50%) rotate(-180deg)", opacity: 0 },
+                   { transform: MITTE + " rotate(0deg)", opacity: 1 }],
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)", dur: 750 },
+        { name: "Gentle slide · <b>with fade</b> <span style='color:var(--caption)'>★ Pro</span>",
+          frames: [{ transform: "translate(-50%, 30%)", opacity: 0 },
+                   { transform: MITTE, opacity: 1 }],
+          easing: "cubic-bezier(0.22, 1, 0.36, 1)", dur: 700 }
+    ];
+
+    var i = 0;
+    function spiele() {
+        var s = SHOWS[i];
+        label.innerHTML = s.name;
+        try {
+            obj.animate(s.frames, { duration: s.dur, easing: s.easing, fill: "forwards" });
+        } catch (e) {}
+        i = (i + 1) % SHOWS.length;
+        window.setTimeout(spiele, s.dur + 1100);
+    }
+    spiele();
+})();
+</script>
+</body>
+</html>
