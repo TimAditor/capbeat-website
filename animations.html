@@ -19,6 +19,9 @@
 /* Kleine Bühne für die Live-Demo dieser Seite */
 .anim-stage {
     position: relative;
+    /* Der Hero zentriert per Flexbox – ohne width würde die Bühne auf
+       0 schrumpfen, weil ihr Inhalt absolut positioniert ist. */
+    width: 100%;
     max-width: 640px;
     height: 240px;
     margin: 34px auto 0;
