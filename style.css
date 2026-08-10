@@ -102,6 +102,9 @@ img, canvas, video { max-width: 100%; }
     text-decoration: none;
     display: flex; align-items: center; gap: 9px;
 }
+/* Der Schriftzug muss EIN Flex-Element sein – sonst schiebt das gap der
+   Navigation zwischen "Cap" und "Beat" und die Marke zerfällt. */
+.brand .wordmark { letter-spacing: -.02em; }
 .brand b { color: var(--caption); }
 .brand .mark {
     width: 26px; height: 26px; border-radius: 6px;
