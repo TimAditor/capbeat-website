@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>How to Caption a Music Video in Premiere Pro (2026) | CapBeat</title>
+<meta name="description" content="Step-by-step: word-by-word lyric captions for music videos inside Premiere Pro — with vocal separation, so recognition actually works on songs." />
+<link rel="canonical" href="https://getcapbeat.com/blog/caption-music-video-premiere-pro.html" />
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="How to Caption a Music Video in Premiere Pro" />
+<meta property="og:description" content="Word-by-word lyric captions on the beat — the workflow that survives a full mix." />
+<meta property="og:url" content="https://getcapbeat.com/blog/caption-music-video-premiere-pro.html" />
+<meta property="og:image" content="https://getcapbeat.com/og.png" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preload" href="../fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="../favicon.ico" sizes="any" />
+<link rel="apple-touch-icon" href="../apple-touch-icon.png" />
+<link rel="stylesheet" href="../style.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to caption a music video in Premiere Pro",
+  "description": "Word-by-word lyric captions for music videos inside Adobe Premiere Pro, using vocal separation so speech recognition works on songs.",
+  "totalTime": "PT15M",
+  "tool": [{ "@type": "HowToTool", "name": "Adobe Premiere Pro" }, { "@type": "HowToTool", "name": "CapBeat plugin" }],
+  "step": [
+    { "@type": "HowToStep", "name": "Install CapBeat", "text": "Download the free installer from getcapbeat.com and run it. Open Premiere and find the panel under Window > Extensions > CapBeat." },
+    { "@type": "HowToStep", "name": "Open your sequence", "text": "Open the music video sequence. Optionally set in and out points to caption only the sung part." },
+    { "@type": "HowToStep", "name": "Transcribe with music mode", "text": "Click 'Transcribe music – detect lyrics'. CapBeat separates the vocals from the instrumental locally, then transcribes only the isolated voice." },
+    { "@type": "HowToStep", "name": "Correct uncertain words", "text": "Words the recognition was unsure about are highlighted. Click, type the fix, press Enter." },
+    { "@type": "HowToStep", "name": "Style and render", "text": "Pick a caption style, font and colors in the live preview, then render. The captions land as a transparent clip above your edit." }
+  ]
+}
+</script>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main navigation">
+  <div class="shell">
+    <a class="brand" href="../index.html"><svg class="mark" viewBox="40.8 264.9 1942.1 1510.9" aria-hidden="true"><path fill="#ffe14d" d="M1645.4,264.9h-835.4c-160.9,0-295.4,112.5-329.3,263.2h285.1c54.3,0,98.4,44,98.4,98.4h0c0,54.3-44,98.4-98.4,98.4H139.2c-54.3,0-98.4,44-98.4,98.4s44,98.4,98.4,98.4h333.3v.3h293.4c54.3,0,98.4,44,98.4,98.4h0c0,54.3-44,98.4-98.4,98.4H245.3c-54.3,0-98.4,44-98.4,98.4s44,98.4,98.4,98.4h520.6c54.3,0,98.4,44,98.4,98.4h0c0,54.3-44,98.4-98.4,98.4h-285.2c33.8,150.8,168.4,263.4,329.3,263.4h835.4c186.4,0,337.5-151.1,337.5-337.5v-835.4c0-186.4-151.1-337.5-337.5-337.5ZM1714.8,1092.8l-441.4,263.5c-56.4,33.6-127.9-7-127.9-72.6v-527c0-65.6,71.5-106.2,127.9-72.6l441.4,263.5c54.9,32.8,54.9,112.4,0,145.2Z"/></svg><span class="wordmark">Cap<b>Beat</b></span></a>
+    <div class="nav-links">
+      <a href="index.html">Blog</a>
+      <a href="../auto-captions.html">Auto Captions</a>
+      <a href="../index.html#music-mode">Music Mode</a>
+      <a href="../index.html#pricing">Pricing</a>
+    </div>
+    <a class="btn btn--loud btn--small cta" href="../index.html#pricing">Download free</a>
+  </div>
+</nav>
+
+<main class="legal" style="padding-top:72px">
+  <article class="artikel">
+    <div class="eyebrow">Tutorial · updated August 2026</div>
+    <h1 style="font-family:var(--display);font-weight:800;letter-spacing:-.028em;margin:10px 0 0">How to caption a music video in Premiere Pro — word by word, on the beat</h1>
+    <p class="meta">6 min read · by the CapBeat team</p>
+
+    <p>Type "auto captions music video" into any forum and the answer is always
+    the same: <i>"recognition doesn't work on songs — type the lyrics by
+    hand."</i> That advice is outdated. Here's the workflow that gets
+    word-by-word lyric captions onto a Premiere timeline in about fifteen
+    minutes — including why the usual way fails.</p>
+
+    <h2>Why your transcription comes back as gibberish</h2>
+    <p>Speech recognition models (including Whisper, the best openly available
+    one) are trained on <b>spoken language</b>. Put drums, bass and synths under
+    the voice and the model literally hears percussion where consonants should
+    be. It starts guessing — you get fragments, wrong words, gaps.</p>
+    <p>The fix isn't a better recognition model. It's giving the model what it
+    was trained on: <b>a clean voice</b>. That's what vocal separation does —
+    an AI model (Demucs, open-sourced by Meta) splits the finished mix into
+    vocals and instrumental. Transcribe the isolated vocals, and suddenly every
+    word lands. On our reference clip that's 14 recognized words without
+    separation versus the complete 47-word lyric with it.</p>
+
+    <h2>What you need</h2>
+    <ul>
+      <li>Adobe Premiere Pro 2023 or newer on Windows 10/11</li>
+      <li>The <a href="../index.html#pricing">CapBeat plugin</a> — the only
+      Premiere plugin with vocal separation built in. Music mode is part of
+      Pro (€79 one-time); the free tier lets you test the full speech workflow
+      first.</li>
+      <li>No cloud account, no upload — everything below runs on your machine.</li>
+    </ul>
+
+    <h2>Step 1: Install and open the panel</h2>
+    <p>Download the installer from the <a href="../download.html">download
+    page</a> and run it (Windows shows its standard warning for new installers
+    — "More info" → "Run anyway"). Start Premiere and open
+    <b>Window&nbsp;→&nbsp;Extensions&nbsp;→&nbsp;CapBeat</b>. On first start the
+    plugin fetches its AI models once (~1.5&nbsp;GB); after that it works
+    offline.</p>
+
+    <h2>Step 2: Open the sequence, set the range</h2>
+    <p>Open your music video sequence. If only part of it is sung, set in and
+    out points and tick <b>"Only between in and out points"</b> — separation
+    takes roughly as long as the material, so a tight range saves real time.</p>
+
+    <h2>Step 3: Hit the music button</h2>
+    <p>Click <b>"♪ Transcribe music – detect lyrics"</b>. CapBeat now exports
+    the sequence audio, separates the vocals from the instrumental on your CPU,
+    and transcribes the isolated voice. For a three-minute song expect roughly
+    three to five minutes total — Premiere stays fully usable while it runs.</p>
+    <p><b>Model tip:</b> "Medium" is the sweet spot for lyrics. "Large-v3" buys
+    a little more accuracy on dense or fast vocals at double the time.</p>
+
+    <h2>Step 4: Fix the words that need fixing</h2>
+    <p>The transcript appears word by word, and here's the part that saves your
+    evening: words the recognition was <i>unsure</i> about are highlighted. You
+    don't proofread everything — you check the marked spots. Click a word, type
+    the correction, press Enter. Ad-libs and stacked harmonies are the usual
+    suspects.</p>
+
+    <h2>Step 5: Style, preview, render</h2>
+    <p>Pick a caption style, your font (every font installed on your system is
+    available), colors and words per line — the preview is pixel-identical to
+    the final render. Then hit render: the captions arrive as a transparent
+    clip on the next free video track, word-timed to the vocal. Your edit
+    underneath stays untouched.</p>
+
+    <h2>Common problems, honest answers</h2>
+    <h3>The vocals are still not recognized well</h3>
+    <p>Extreme metal vocals, heavy autotune-stacking and very dense mixes remain
+    hard even after separation. Test with the free tier on your actual material
+    before buying — that's what it's for.</p>
+    <h3>Can I do this without a plugin?</h3>
+    <p>Partially. You can separate vocals in external tools, transcribe the
+    stem, then rebuild timing by hand in Premiere — it works, and it costs you
+    an afternoon per song. The plugin exists because that afternoon got old.</p>
+    <h3>Does this work for karaoke-style videos?</h3>
+    <p>Yes — word-by-word timing with a highlighted active word is exactly the
+    karaoke pattern. Combine it with the <a href="../animations.html">drop-in
+    animations</a> for intros and titles.</p>
+
+    <div class="cta-box">
+      <h3 style="margin:0 0 8px">Try it on your own track</h3>
+      <p style="margin:0 0 16px">The free tier has the complete speech workflow — test the recognition quality on your material first, then unlock music mode.</p>
+      <a class="btn btn--loud" href="../index.html#pricing">Download CapBeat free</a>
+    </div>
+
+    <p>Want the bigger picture first? Read our
+    <a href="best-premiere-pro-caption-plugins.html">honest comparison of all
+    caption plugins for Premiere Pro</a>.</p>
+  </article>
+</main>
+
+<footer>
+  <div class="shell">
+    <div class="col">
+      <b>CapBeat</b>
+      <a href="../index.html">Home</a>
+      <a href="index.html">Blog</a>
+      <a href="../animations.html">Animations</a>
+    </div>
+    <div class="col">
+      <b>Help</b>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="mailto:help@getcapbeat.com">help@getcapbeat.com</a>
+    </div>
+    <div class="col">
+      <b>Legal</b>
+      <a href="../impressum.html">Imprint (Impressum)</a>
+      <a href="../datenschutz.html">Privacy policy</a>
+    </div>
+    <p class="fine">Adobe and Premiere Pro are trademarks of Adobe Inc. This plugin is an independent product and is not affiliated with Adobe.</p>
+  </div>
+</footer>
+
+<script src="../reveal.js" defer></script>
+</body>
+</html>

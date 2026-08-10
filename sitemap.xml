@@ -2,23 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://getcapbeat.com/</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-10</lastmod>
   </url>
   <url>
     <loc>https://getcapbeat.com/auto-captions.html</loc>
-    <lastmod>2026-08-03</lastmod>
+    <lastmod>2026-08-10</lastmod>
   </url>
   <url>
     <loc>https://getcapbeat.com/animations.html</loc>
-    <lastmod>2026-08-06</lastmod>
-  </url>
-  <url>
-    <loc>https://getcapbeat.com/blog/</loc>
-  </url>
-  <url>
-    <loc>https://getcapbeat.com/blog/best-premiere-pro-caption-plugins.html</loc>
+    <lastmod>2026-08-10</lastmod>
   </url>
   <url>
     <loc>https://getcapbeat.com/mac.html</loc>
+    <lastmod>2026-08-10</lastmod>
+  </url>
+  <url>
+    <loc>https://getcapbeat.com/blog/</loc>
+    <lastmod>2026-08-10</lastmod>
+  </url>
+  <url>
+    <loc>https://getcapbeat.com/blog/best-premiere-pro-caption-plugins.html</loc>
+    <lastmod>2026-08-10</lastmod>
+  </url>
+  <url>
+    <loc>https://getcapbeat.com/blog/caption-music-video-premiere-pro.html</loc>
+    <lastmod>2026-08-10</lastmod>
   </url>
 </urlset>
