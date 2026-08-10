@@ -25,10 +25,17 @@
     --ok:         #4ade80;
     --bad:        #ff6b6b;
 
-    /* Überschriften: Bricolage Grotesque. Fließtext: Inter.
-       Die Caption-Demos bleiben absichtlich in Arial Black – sie sollen
-       aussehen wie die Captions des Plugins, nicht wie die Website. */
-    --display: "Bricolage Grotesque", "Arial Black", sans-serif;
+    /* Überschriften UND Fließtext: Inter – eine Familie, die Hierarchie
+       macht allein die Stärke (800 für Überschriften, 400 im Text).
+       Bricolage bleibt dem Schriftzug vorbehalten, damit die Marke ihr
+       eigenes Gesicht behält. Die Caption-Demos bleiben absichtlich in
+       Arial Black – sie sollen aussehen wie die Captions des Plugins,
+       nicht wie die Website.
+       ACHTUNG: Inter bringt alle Stärken mit, Bricolage nur 800. Alles,
+       was --display nutzt, braucht deshalb eine ausdrückliche
+       font-weight – sonst steht es plötzlich in normaler Stärke da. */
+    --display: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --brand: "Bricolage Grotesque", "Arial Black", sans-serif;
     --body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --capfont: "Arial Black", "Arial", sans-serif;
     --mono: "Cascadia Mono", Consolas, "SF Mono", Menlo, monospace;
@@ -97,7 +104,8 @@ img, canvas, video { max-width: 100%; }
     height: 62px;
 }
 .brand {
-    font-family: var(--display);
+    font-family: var(--brand);
+    font-weight: 800;   /* Bricolage liegt nur in 800 vor – ausdrücklich sagen */
     font-size: 17px; letter-spacing: -.02em;
     text-decoration: none;
     display: flex; align-items: center; gap: 9px;
@@ -154,7 +162,7 @@ h1 {
     font-family: var(--display);
     font-weight: 800;
     font-size: clamp(34px, 6vw, 62px);
-    line-height: 1.03; letter-spacing: -.025em;
+    line-height: 1.05; letter-spacing: -.032em;
     margin: 0; max-width: 21ch; text-wrap: balance;
 }
 h1 .hl {
@@ -248,7 +256,7 @@ h2 {
     font-family: var(--display);
     font-weight: 800;
     font-size: clamp(26px, 4vw, 40px);
-    line-height: 1.08; letter-spacing: -.02em;
+    line-height: 1.1; letter-spacing: -.026em;
     margin: 0; text-wrap: balance;
 }
 .sec-head p { margin: 0; color: var(--ink-soft); font-size: 17.5px; max-width: var(--measure); text-wrap: pretty; }
@@ -263,6 +271,7 @@ h2 {
 .proof-grid > div { background: var(--ground-2); padding: 26px 26px 22px; display: flex; flex-direction: column; gap: 6px; }
 .proof-grid .n {
     font-family: var(--display);
+    font-weight: 800;
     font-size: 46px; line-height: 1; letter-spacing: -.03em;
     font-variant-numeric: tabular-nums;
 }
@@ -278,7 +287,8 @@ h2 {
     display: flex; flex-direction: column; gap: 10px;
 }
 .step-card .k {
-    font-family: var(--display); color: var(--vocal); font-size: 15px;
+    font-family: var(--display); font-weight: 700;
+    color: var(--vocal); font-size: 15px; letter-spacing: -.01em;
 }
 .step-card h3 { margin: 0; font-size: 18px; }
 .step-card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
@@ -382,7 +392,7 @@ h2 {
     padding: 3px 10px; border-radius: 999px;
 }
 .tier .t-name { font-family: var(--mono); font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--mute); }
-.tier .t-price { font-family: var(--display); font-size: 42px; letter-spacing: -.03em; line-height: 1; }
+.tier .t-price { font-family: var(--display); font-weight: 800; font-size: 42px; letter-spacing: -.03em; line-height: 1; }
 .tier .t-price small { font-family: var(--body); font-weight: 400; font-size: 13.5px; color: var(--mute); letter-spacing: 0; }
 .tier ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .tier li { font-size: 15px; color: var(--ink-soft); padding-left: 22px; position: relative; }
@@ -457,7 +467,8 @@ tr.self td:first-child { font-weight: 700; }
 .faq summary::-webkit-details-marker { display: none; }
 .faq summary::after {
     content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
-    font-family: var(--display); color: var(--vocal); font-size: 19px;
+    font-family: var(--display); font-weight: 700;
+    color: var(--vocal); font-size: 19px;
 }
 .faq details[open] summary::after { content: "–"; }
 .faq .a { padding: 0 0 18px; color: var(--ink-soft); font-size: 15.5px; max-width: var(--measure); }
