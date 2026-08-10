@@ -114,12 +114,10 @@ img, canvas, video { max-width: 100%; }
    Navigation zwischen "Cap" und "Beat" und die Marke zerfällt. */
 .brand .wordmark { letter-spacing: -.02em; }
 .brand b { color: var(--caption); }
+/* Das echte Markenzeichen (SVG, Seitenverhältnis 1942:1511) */
 .brand .mark {
-    width: 26px; height: 26px; border-radius: 6px;
-    background: var(--caption);
-    color: var(--caption-ink);
-    display: grid; place-items: center;
-    font-size: 13px;
+    width: 31px; height: 24px;
+    display: block; flex-shrink: 0;
 }
 .nav-links { display: flex; gap: 22px; margin-left: auto; }
 .nav-links a {
