@@ -570,3 +570,14 @@ footer .fine { width: 100%; margin-top: 10px; font-size: 12.5px; color: var(--mu
     font-size: 14px; color: var(--ink-soft); background: rgba(255,255,255,.02);
 }
 .legal ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 7px; }
+
+/* ------------------------------------------------ Rezensionen der ersten 100 */
+.review-card { display: flex; flex-direction: column; gap: 12px; }
+.review-quote {
+    font-size: 15.5px;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin: 0;
+    flex: 1;
+}
