@@ -27,7 +27,7 @@
     <h1 style="font-family:var(--display);letter-spacing:-.02em;margin:0">Datenschutzerkl&auml;rung</h1>
     <p class="langswitch"><a href="datenschutz.html">English version</a> &middot; <b>Deutsch</b></p>
 
-    <p class="note">Stand: 26.&nbsp;August&nbsp;2026. Diese deutsche Fassung ist die
+    <p class="note">Stand: 14.&nbsp;September&nbsp;2026. Diese deutsche Fassung ist die
       ma&szlig;gebliche Version.</p>
 
     <h2>1. Verantwortlicher</h2>
@@ -41,7 +41,8 @@
     <p>
       CapBeat verarbeitet Ihre Audio- und Videodaten <strong>ausschlie&szlig;lich auf Ihrem eigenen
       Rechner</strong>. Weder Aufnahmen noch Transkripte oder Nutzungsdaten erreichen uns. Diese
-      Website setzt keine Cookies und nutzt keine Analyse-Dienste. Die einzigen personenbezogenen
+      Website setzt keine Cookies und speichert nichts auf Ihrem Ger&auml;t. Seitenaufrufe z&auml;hlen
+      wir, ohne Cookies und ohne Ihre IP-Adresse zu speichern (Abschnitt&nbsp;4). Die einzigen personenbezogenen
       Daten, die wir haben, geben Sie uns selbst: Ihre E-Mail-Adresse beim Kauf oder Download und
       das, was Sie uns in einer Support-Nachricht schreiben.
     </p>
@@ -57,11 +58,44 @@
       <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>.
     </p>
 
-    <h2>4. Keine Cookies, kein Tracking</h2>
+    <h2>4. Keine Cookies, und ein Seitenz&auml;hler ohne Cookies</h2>
     <p>
-      Diese Website setzt keine Cookies, bindet keine Analyse- oder Werbedienste ein und l&auml;dt
-      keine Inhalte von Drittservern. Deshalb gibt es auch kein Einwilligungsbanner &ndash; es gibt
-      nichts einzuwilligen.
+      Diese Website setzt keine Cookies, schreibt nichts in Ihren Browser und zeigt keine
+      Werbung. Deshalb sehen Sie kein Einwilligungsbanner: Auf Ihrem Ger&auml;t wird nichts
+      gespeichert und nichts ausgelesen, &sect;&nbsp;25 TDDDG greift hier also nicht.
+    </p>
+    <p>
+      Seitenaufrufe z&auml;hlen wir mit
+      <a href="https://www.goatcounter.com/" rel="noopener">GoatCounter</a>, einem quelloffenen
+      Dienst von Martin Tournoij, Tilburg, Niederlande, gehostet innerhalb der EU. Erfasst wird
+      pro Aufruf: welche Seite Sie ge&ouml;ffnet haben, von welcher Seite Sie kamen, Ihr ungef&auml;hres
+      Land, Browser und Betriebssystem sowie Ihre Bildschirmgr&ouml;&szlig;e.
+    </p>
+    <p>
+      <strong>Ihre IP-Adresse wird nie gespeichert.</strong> Sie wird einmalig im Arbeitsspeicher
+      zusammen mit Ihrer Browserkennung zu einem Hash verrechnet, damit GoatCounter innerhalb
+      eines Tages einen wiederkehrenden von einem neuen Besuch unterscheiden kann. Dieser Hash
+      wird t&auml;glich neu gesalzen und l&auml;sst sich nicht auf Sie zur&uuml;ckf&uuml;hren. Wir k&ouml;nnen weder
+      einzelne Besucher erkennen noch jemanden von Website zu Website verfolgen noch einen
+      Besuch einem Kunden zuordnen.
+    </p>
+    <p>
+      Warum &uuml;berhaupt: Bei einem Ein-Personen-Produkt m&uuml;ssen wir wissen, welche Seiten Menschen
+      wirklich helfen und welche vergebliche M&uuml;he sind. Rechtsgrundlage ist unser berechtigtes
+      Interesse an einer funktionierenden Website (Art.&nbsp;6 Abs.&nbsp;1 lit.&nbsp;f DSGVO). Sie k&ouml;nnen
+      jederzeit nach Art.&nbsp;21 DSGVO widersprechen, per Nachricht an
+      <a href="mailto:support@getcapbeat.com">support@getcapbeat.com</a> oder, einfacher, direkt
+      hier. Einzelheiten stehen in der
+      <a href="https://www.goatcounter.com/help/privacy" rel="noopener">Datenschutzerkl&auml;rung von GoatCounter</a>.
+    </p>
+    <p style="margin-top:16px">
+      <button type="button" id="gcOptOut" class="btn btn--small">Z&auml;hler ausschalten</button>
+      <span id="gcOptOutState" style="margin-left:12px;color:var(--mute);font-size:13.5px"></span>
+    </p>
+    <p style="color:var(--mute);font-size:13.5px">
+      Diese Einstellung lebt nur in diesem Browser, als ein einzelner Eintrag namens
+      <code>skipgc</code>. Es ist das Einzige, was wir je auf Ihrem Ger&auml;t speichern, und
+      auch das nur, weil Sie es so wollten.
     </p>
 
     <h2>5. Das Plugin selbst</h2>
@@ -219,5 +253,55 @@
   </div>
 </footer>
 <script src="reveal.js" defer></script>
+
+<script>
+/* Der Abmeldeknopf fuer den Seitenzaehler. Schreibt genau einen Eintrag
+   in den Browser des Besuchers - GoatCounter prueft ihn selbst, und der
+   filter() im Schnipsel unten prueft ihn nochmal, damit es auch dann
+   haelt, wenn sich das eingebaute Verhalten mal aendert. */
+(function () {
+    var knopf = document.getElementById("gcOptOut");
+    var text = document.getElementById("gcOptOutState");
+    if (!knopf || !text) { return; }
+
+    /* null heisst: der Browser laesst uns gar nichts speichern. */
+    function abgemeldet() {
+        try { return localStorage.getItem("skipgc") === "t"; }
+        catch (e) { return null; }
+    }
+
+    function zeige() {
+        var aus = abgemeldet();
+        if (aus === null) {
+            knopf.disabled = true;
+            text.textContent = "Ihr Browser blockiert Speicher fuer Websites, deshalb laesst sich das hier nicht merken.";
+            return;
+        }
+        knopf.textContent = aus ? "Zähler wieder einschalten" : "Zähler ausschalten";
+        text.textContent = aus ? "Aus. Dieser Browser wird nicht mehr gezählt." : "";
+    }
+
+    knopf.addEventListener("click", function () {
+        try {
+            if (abgemeldet()) { localStorage.removeItem("skipgc"); }
+            else { localStorage.setItem("skipgc", "t"); }
+        } catch (e) {}
+        zeige();
+    });
+
+    zeige();
+})();
+</script>
+
+<!-- Seitenzaehler: GoatCounter, in der EU gehostet, ohne Cookies, ohne
+     gespeicherte IP. Deshalb braucht diese Seite kein Einwilligungsbanner.
+     Wer nicht gezaehlt werden will, findet auf /datenschutz.html einen
+     Knopf dafuer. Der setzt im Browser den Eintrag "skipgc" auf "t";
+     count.js prueft den von sich aus und zaehlt dann nicht mit.
+     Ein eigener filter() waere hier sinnlos - count.js ersetzt ihn
+     beim Laden durch seinen eigenen (am 14.9.2026 in der Quelle
+     nachgesehen). -->
+<script data-goatcounter="https://capbeat.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
