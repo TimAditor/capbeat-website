@@ -230,6 +230,14 @@
 .pcap[data-stil="typer"] span.on { opacity: 1; }
 .pcap[data-stil="typer"] span.on { color: var(--caption); }
 
+/* Neon (neu in 0.9.35): ohne Kontur, aktives Wort leuchtet pink */
+.pcap[data-stil="neon"] { -webkit-text-stroke: 0; color: #ede7ff; text-shadow: 0 0 6px rgba(237, 231, 255, 0.35); }
+.pcap[data-stil="neon"] span.on { color: #fff; text-shadow: 0 0 6px #ff4fd8, 0 0 16px #ff4fd8, 0 0 30px rgba(255, 79, 216, 0.7); }
+
+/* Marker (neu in 0.9.35): gelber Textmarker hinter dem aktiven Wort */
+.pcap[data-stil="marker"] span { padding: 0 0.12em; }
+.pcap[data-stil="marker"] span.on { color: #111; -webkit-text-stroke: 0; text-shadow: none; background: linear-gradient(100deg, transparent 2%, #ffe14d 6%, #ffe14d 94%, transparent 98%); border-radius: 0.08em; transform: rotate(-1.5deg); }
+
 /* Stil-Knöpfe – sehen aus wie im Panel */
 .chips {
     position: relative;
@@ -276,6 +284,7 @@
     background: var(--caption);
 }
 .chip-btn[aria-pressed="true"] .pro-tag { background: var(--caption-ink); color: var(--caption); }
+.new-tag { font-size: 9px; font-weight: 800; letter-spacing: 0.08em; line-height: 1; padding: 2px 4px; border-radius: 3px; color: #fff; background: #7c5cff; }
 
 .stage-note { position: relative; z-index: 1; font-size: 12.5px; color: var(--mute); margin: 0; }
 

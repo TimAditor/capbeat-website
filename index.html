@@ -106,6 +106,8 @@
         <button type="button" class="chip-btn" data-stil="box" aria-pressed="false">Box <span class="pro-tag">PRO</span></button>
         <button type="button" class="chip-btn" data-stil="pill" aria-pressed="false">Pill <span class="pro-tag">PRO</span></button>
         <button type="button" class="chip-btn" data-stil="typer" aria-pressed="false">Typewriter <span class="pro-tag">PRO</span></button>
+        <button type="button" class="chip-btn" data-stil="neon" aria-pressed="false">Neon <span class="new-tag">NEW</span></button>
+        <button type="button" class="chip-btn" data-stil="marker" aria-pressed="false">Marker <span class="new-tag">NEW</span></button>
       </div>
       <p class="stage-note">Same styles, same look as in the plugin.</p>
     </div>
@@ -226,7 +228,7 @@
         <div class="anchor">Subscriptions: <s>$80–240 a year</s></div>
         <ul>
           <li><b>Music mode: lyrics from a finished song</b></li>
-          <li>All 8 styles, any font, drop shadow</li>
+          <li>All 13 styles, any font, drop shadow</li>
           <li>Unlimited length and SRT export</li>
           <li>All 19 drop-in animations</li>
           <li>2 years of updates, runs forever</li>
@@ -324,7 +326,7 @@
     var knoepfe = document.querySelectorAll(".chip-btn[data-stil]");
     var reduziert = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var zeile = 0, wort = 0, timer = null, autoWechsel = true, durchlaeufe = 0;
-    var REIHE = ["pop", "karaoke", "box", "pill", "typer"];
+    var REIHE = ["pop", "neon", "karaoke", "box", "marker", "pill", "typer"];
 
     function zeige() {
         var w = ZEILEN[zeile];
