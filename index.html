@@ -4,17 +4,13 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<!-- ============ SEO ============
-     Currently live at getcapbeat.com.
-     When the custom domain arrives: swap the URLs here, in
-     auto-captions.html, robots.txt and sitemap.xml. -->
-<title>Auto Captions for Premiere Pro That Read Song Lyrics – CapBeat</title>
-<meta name="description" content="Free word-by-word captions for Adobe Premiere Pro in 29 languages — and the only plugin that reads song lyrics from a finished mix." />
+<title>Animated Auto Captions for Premiere Pro – CapBeat</title>
+<meta name="description" content="Word-by-word animated captions inside Adobe Premiere Pro. One click, no upload, no subscription. Free without watermark, Pro once for €79. Even reads song lyrics." />
 <link rel="canonical" href="https://getcapbeat.com/" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="Captions that can read song lyrics – CapBeat for Premiere Pro" />
-<meta property="og:description" content="Vocals get separated from the instrumental locally, then captioned word by word. 14 → 47 recognized words on the same clip. Free without watermark, Pro one-time." />
+<meta property="og:title" content="CapBeat – Animated captions, right inside Premiere Pro" />
+<meta property="og:description" content="One click turns your sequence into word-by-word captions on your timeline. Runs offline, no subscription, even reads song lyrics." />
 <meta property="og:url" content="https://getcapbeat.com/" />
 <meta property="og:image" content="https://getcapbeat.com/og.png" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -26,9 +22,9 @@
   "name": "CapBeat",
   "operatingSystem": "Windows",
   "applicationCategory": "MultimediaApplication",
-  "description": "Word-by-word animated captions for Adobe Premiere Pro. Music mode separates vocals from the instrumental locally and reads song lyrics from a finished mix.",
+  "description": "Word-by-word animated captions for Adobe Premiere Pro. Runs locally. Music mode separates vocals from the instrumental and reads song lyrics from a finished mix.",
   "offers": [
-    { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free" },
+    { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "name": "Free" },
     { "@type": "Offer", "price": "79", "priceCurrency": "EUR", "name": "Pro (one-time)" }
   ]
 }
@@ -38,38 +34,38 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Why does Windows warn me during installation?",
-      "acceptedAnswer": { "@type": "Answer", "text": "CapBeat is digitally signed, so Windows names Morenotless as the publisher instead of calling it unknown. SmartScreen can still warn while a fresh version builds up downloads, which is about age, not safety. Click More info, then Run anyway." } },
     { "@type": "Question", "name": "Does CapBeat run on Mac?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Not yet. The download is a Windows installer and will not run on macOS. CapBeat currently requires Windows 10/11 with Premiere Pro 2023 or newer. A Mac build is in progress: the panel is already cross-platform, but the bundled speech runtime and installer have to be rebuilt and notarized for Apple Silicon." } },
-    { "@type": "Question", "name": "How good is music mode really?",
-      "acceptedAnswer": { "@type": "Answer", "text": "On our reference clip: 14 recognized words without separation, 47 with — the complete lyric. It works best on clearly sung pop, rap and singer-songwriter material. Extreme metal vocals or very dense mixes remain hard." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Not yet. CapBeat needs Windows 10/11 and Premiere Pro 2023 or newer. A Mac version is in the works." } },
     { "@type": "Question", "name": "Are my videos uploaded anywhere?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. There is no server. Everything — transcription, vocal separation, rendering — runs on your machine. The only download is the one-time AI model fetch on first start." } },
-    { "@type": "Question", "name": "I bought Pro — how do I activate it?",
-      "acceptedAnswer": { "@type": "Answer", "text": "After checkout you receive a license key by email. Open the CapBeat panel in Premiere, paste the key into the License card and click Activate. Pro covers 3 machines; a deactivate button frees up a seat." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Transcription, vocal separation and rendering run on your own computer. The only download is the speech model, once." } },
+    { "@type": "Question", "name": "Why does Windows warn me during installation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The installer is digitally signed by Morenotless. SmartScreen can still warn on a fresh version until it has enough downloads. Click More info, then Run anyway." } },
+    { "@type": "Question", "name": "How do I activate Pro?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You get a license key by email. Paste it into the License tab of the CapBeat panel. Pro covers 3 computers." } },
     { "@type": "Question", "name": "Do I get my money back?",
-      "acceptedAnswer": { "@type": "Answer", "text": "14 days, no questions asked, by email." } }
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Within 14 days, one email, full refund, no questions asked." } }
   ]
 }
 </script>
+
 <link rel="preload" href="fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="preload" href="fonts/bricolage-800.woff2" as="font" type="font/woff2" crossorigin />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="favicon.ico" sizes="any" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 <link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="home.css" />
 </head>
-<body>
+<body class="home">
 
 <!-- ================================================== Navigation -->
 <nav class="nav" aria-label="Main navigation">
   <div class="shell">
     <a class="brand" href="#top"><svg class="mark" viewBox="40.8 264.9 1942.1 1510.9" aria-hidden="true"><path fill="#ffe14d" d="M1645.4,264.9h-835.4c-160.9,0-295.4,112.5-329.3,263.2h285.1c54.3,0,98.4,44,98.4,98.4h0c0,54.3-44,98.4-98.4,98.4H139.2c-54.3,0-98.4,44-98.4,98.4s44,98.4,98.4,98.4h333.3v.3h293.4c54.3,0,98.4,44,98.4,98.4h0c0,54.3-44,98.4-98.4,98.4H245.3c-54.3,0-98.4,44-98.4,98.4s44,98.4,98.4,98.4h520.6c54.3,0,98.4,44,98.4,98.4h0c0,54.3-44,98.4-98.4,98.4h-285.2c33.8,150.8,168.4,263.4,329.3,263.4h835.4c186.4,0,337.5-151.1,337.5-337.5v-835.4c0-186.4-151.1-337.5-337.5-337.5ZM1714.8,1092.8l-441.4,263.5c-56.4,33.6-127.9-7-127.9-72.6v-527c0-65.6,71.5-106.2,127.9-72.6l441.4,263.5c54.9,32.8,54.9,112.4,0,145.2Z"/></svg><span class="wordmark">Cap<b>Beat</b></span></a>
     <div class="nav-links">
-      <a href="auto-captions.html">Auto Captions</a>
-      <a href="animations.html">Animations</a>
-      <a href="#music-mode">Music Mode</a>
-      <a href="#styles">Styles</a>
+      <a href="#how">How it works</a>
+      <a href="#music-mode">Music mode</a>
+      <a href="#compare">Compare</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
     </div>
@@ -78,20 +74,88 @@
 </nav>
 
 <!-- ================================================== Hero -->
-<header class="hero" id="top">
+<header class="h-hero" id="top">
   <div class="shell">
-    <div class="eyebrow">Caption plugin for Adobe Premiere Pro · Windows</div>
-    <h1>Captions that can read <span class="hl">song lyrics</span>.</h1>
-    <p class="lede">Word-by-word auto captions for interviews, talking heads, Shorts and Reels — the kind you know, minus the subscription. Plus something no other Premiere Pro plugin does: on music, it separates the vocals from the instrumental first. Then every word lands.</p>
-    <div class="hero-ctas">
-      <a class="btn btn--loud" href="#pricing">Download free <span class="sub">· Windows · no watermark</span></a>
-      <a class="btn" href="#music-mode">See music mode</a>
+    <div class="copy">
+      <span class="eyebrow-chip"><i></i>Premiere Pro plugin · Windows</span>
+      <h1>Animated captions, right <span class="boxword">inside</span> Premiere.</h1>
+      <p class="lead">One click turns your sequence into word-by-word captions on your timeline. No upload. No subscription.</p>
+      <div class="cta-row">
+        <a class="btn btn--loud" href="https://buy.polar.sh/polar_cl_UBzH7JwDbSbKJ4mGbP7Q3WBy0e9HrLJKyGiNG1zJ5A0">Download free</a>
+        <a class="link-arrow" href="#pricing">Pro from €79, once →</a>
+      </div>
+      <ul class="trust">
+        <li>No watermark</li>
+        <li>Runs offline</li>
+        <li>Signed installer</li>
+        <li>14-day money back</li>
+      </ul>
     </div>
-    <p class="hero-fine"><b>€0</b> for Shorts &amp; Reels &nbsp;·&nbsp; Pro <b>€79 one-time</b> — no subscription</p>
 
-    <!-- The centerpiece: the same line twice — recognized from the mix on the
-         left, after vocal separation on the right. The lines are invented
-         example text, not real song lyrics. -->
+    <!-- Live-Demo: dieselben Stile wie im Plugin, zum Durchklicken -->
+    <div class="stage" id="styles">
+      <div class="phone" aria-label="Caption style preview">
+        <div class="screen-v">
+          <span class="rec">REC</span>
+          <div class="pcap" id="pcap" data-stil="pop" aria-hidden="true"></div>
+        </div>
+      </div>
+      <div class="chips" role="group" aria-label="Caption style">
+        <button type="button" class="chip-btn" data-stil="pop" aria-pressed="true">Pop</button>
+        <button type="button" class="chip-btn" data-stil="karaoke" aria-pressed="false">Karaoke</button>
+        <button type="button" class="chip-btn" data-stil="box" aria-pressed="false">Box <span class="pro-tag">PRO</span></button>
+        <button type="button" class="chip-btn" data-stil="pill" aria-pressed="false">Pill <span class="pro-tag">PRO</span></button>
+        <button type="button" class="chip-btn" data-stil="typer" aria-pressed="false">Typewriter <span class="pro-tag">PRO</span></button>
+      </div>
+      <p class="stage-note">Same styles, same look as in the plugin.</p>
+    </div>
+  </div>
+</header>
+
+<!-- Rezensionen aus dem Founding-Review-Checkout. Der Block zwischen den
+     Marken wird von ops/rezensionen.js erzeugt - nicht von Hand aendern. -->
+<!-- REZENSIONEN-START --><!-- REZENSIONEN-ENDE -->
+
+<!-- ================================================== How it works -->
+<section id="how">
+  <div class="shell">
+    <div class="center-head">
+      <h2>Three clicks. Done.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">1</span>
+        <h3>Transcribe</h3>
+        <p>Your sequence, on your own PC. 29 languages, detected automatically.</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <h3>Pick a style</h3>
+        <p>Live preview that matches the render exactly. Fix any word with a click.</p>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <h3>Render</h3>
+        <p>The captions land as a clip above your video. Your edit stays untouched.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================== Music mode -->
+<section id="music-mode" class="music">
+  <div class="shell">
+    <div class="copy">
+      <span class="tag">Only in CapBeat</span>
+      <h2>Even song lyrics.</h2>
+      <p class="lead">Speech recognition hears fragments in a finished song. CapBeat separates the vocals first, then captions every word.</p>
+      <div class="bignums">
+        <div><span class="n dim">14</span><small>words from the mix</small></div>
+        <span class="arrow">→</span>
+        <div><span class="n hot">47</span><small>with music mode</small></div>
+      </div>
+    </div>
+
     <div class="demo" aria-label="Before and after demo">
       <div class="screen screen--off">
         <span class="badge">Standard recognition</span>
@@ -103,190 +167,43 @@
         <div class="cap" id="capOn" aria-hidden="true"></div>
         <div class="wave" id="waveOn" aria-hidden="true"></div>
       </div>
-      <div class="demo-caps">
-        <p class="demo-cap">The finished mix: <b>fragments, wrong words, gaps.</b></p>
-        <p class="demo-cap">Vocals only: <b>every line, word by word, on the beat.</b></p>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ================================================== Proof -->
-<section class="proof-band tight" aria-label="Measured results">
-  <div class="shell">
-    <div class="proof-grid">
-      <div><div class="n">14</div><div class="l">words Whisper recognizes from the finished mix — fragments</div></div>
-      <div><div class="n hot">47</div><div class="l">words after vocal separation — the complete lyric</div></div>
-      <div><div class="n">≈&nbsp;1×</div><div class="l">realtime: 20&nbsp;s of audio takes about 22&nbsp;s to separate, locally on CPU</div></div>
-      <div><div class="n">0</div><div class="l">uploads. Your footage never leaves your machine</div></div>
-    </div>
-    <p class="proof-note">Measured on one and the same 20-second excerpt of a real music video, both runs on the same machine with the same Whisper model (medium). Not a lab-conditions number.</p>
-  </div>
-</section>
-
-<!-- Rezensionen aus dem Founding-Review-Checkout. Der Block zwischen den
-     Marken wird von ops/rezensionen.js erzeugt - nicht von Hand aendern. -->
-<!-- REZENSIONEN-START --><!-- REZENSIONEN-ENDE -->
-
-<!-- ================================================== Everyday captions -->
-<section id="captions">
-  <div class="shell">
-    <div class="sec-head">
-      <h2>First things first: it’s a complete caption tool.</h2>
-      <p>Music mode is the specialty — underneath sits a full auto-caption workflow for everything spoken. Podcast clips, interviews, tutorials, vlogs: the everyday work you’d otherwise open Submagic or CapCut for.</p>
-    </div>
-    <div class="steps">
-      <div class="step-card">
-        <div class="k">Recognition</div>
-        <h3>Whisper, up to Large-v3</h3>
-        <p>The same models the big web services run on — just on your machine. 29 languages, auto-detected, full quality even on the free plan.</p>
-      </div>
-      <div class="step-card">
-        <div class="k">Corrections</div>
-        <h3>Click a word, type, done</h3>
-        <p>Uncertain words are highlighted. Enter confirms, Tab jumps to the next — a 60-second Reel is clean in under a minute.</p>
-      </div>
-      <div class="step-card">
-        <div class="k">Result</div>
-        <h3>Pixel-identical to the preview</h3>
-        <p>Preview and render share the exact same drawing routine. What you see in the panel is what ends up as a transparent clip over your edit.</p>
-      </div>
-    </div>
-    <p style="margin:22px 0 0"><a href="auto-captions.html" style="color:var(--caption);font-weight:600">Everything about auto captions for speech&nbsp;→</a></p>
-  </div>
-</section>
-
-<!-- ================================================== Animations teaser -->
-<section class="quiet-strip tight">
-  <div class="shell">
-    <h2>New: drop-in animations for anything on your timeline</h2>
-    <p>Logos, stickers, lower thirds, screenshots — select the clip, pick one of 19 animations, done. Real easing curves, true motion blur via Premiere's own shutter, zero keyframing, and everything stays editable. <a href="animations.html" style="color:var(--caption);font-weight:600">See the animations in action&nbsp;→</a></p>
-  </div>
-</section>
-
-<!-- ================================================== Music mode -->
-<section id="music-mode">
-  <div class="shell split">
-    <div class="txt">
-      <div class="sec-head" style="margin-bottom:0">
-        <h2>Why everyone else fails on music</h2>
-      </div>
-      <p>Speech recognition is trained on <b>spoken language</b>. Put a beat under the voice and it hears drums instead of consonants — and starts guessing. That’s why every guide repeats the same advice: for song lyrics, type them in by hand.</p>
-      <p>CapBeat adds a step no other Premiere Pro plugin has: a second neural network (Demucs, open-sourced by Meta) <b>splits the mix into vocals and instrumental</b> — locally, on your CPU. Recognition only ever hears the voice. Guessing becomes reading.</p>
-      <p>Web services exist that can do this — in exchange for uploads, subscriptions and a queue. <b>On the Premiere timeline, with nothing leaving your machine, this plugin stands alone.</b></p>
-      <p><a href="blog/caption-music-video-premiere-pro.html" style="color:var(--caption)">Full walkthrough: how to caption a music video, step by step →</a></p>
-    </div>
-    <div class="stems" aria-hidden="true">
-      <div class="stem">
-        <span class="name">Your mix</span>
-        <span class="bars" data-bars="mix"></span>
-        <span class="tag">voice + drums + bass + synths stacked</span>
-      </div>
-      <div class="stem stem--vocals">
-        <span class="name">Vocals</span>
-        <span class="bars" data-bars="vocals"></span>
-        <span class="tag"><b>→ this is all recognition hears</b></span>
-      </div>
-      <div class="stem">
-        <span class="name">Instrumental</span>
-        <span class="bars" data-bars="inst"></span>
-        <span class="tag">ignored for the captions</span>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- ================================================== How it works -->
-<section id="how-it-works" class="tight">
+<!-- ================================================== Compare -->
+<section id="compare">
   <div class="shell">
-    <div class="sec-head">
-      <h2>Three clicks, zero uploads</h2>
-      <p>The plugin runs as a panel inside Premiere. No export, no browser tab, no reimport.</p>
+    <div class="center-head">
+      <h2>Why not just use a subscription tool?</h2>
     </div>
-    <div class="steps">
-      <div class="step-card">
-        <div class="vid vid--demo" aria-hidden="true">
-          <div class="dm dm--scan">
-            <span class="dm-wf" data-bars="vocals"></span>
-            <span class="dm-sweep"></span>
-            <span class="dm-chip">English · detected</span>
-          </div>
-        </div>
-        <div class="k">Step 1</div>
-        <h3>Transcribe the sequence</h3>
-        <p>Language is detected automatically — 29 languages. For music: tick “Music / vocals” and the plugin handles the rest.</p>
-      </div>
-      <div class="step-card">
-        <div class="vid vid--demo" aria-hidden="true">
-          <div class="dm dm--caps">
-            <span class="dm-cap"><b>MAKE</b><b>IT</b><b>POP</b></span>
-          </div>
-        </div>
-        <div class="k">Step 2</div>
-        <h3>Style it, see it live</h3>
-        <p>Your fonts, your colors, word-by-word animation. The preview is pixel-identical to the final render. Every word is editable with a click.</p>
-      </div>
-      <div class="step-card">
-        <div class="vid vid--demo" aria-hidden="true">
-          <div class="dm dm--tl">
-            <span class="dm-track dm-track--cap"><i>Captions</i></span>
-            <span class="dm-track dm-track--v"><i>Your edit</i></span>
-            <span class="dm-track dm-track--a"><i>Audio</i></span>
-            <span class="dm-play"></span>
-          </div>
-        </div>
-        <div class="k">Step 3</div>
-        <h3>Onto the timeline</h3>
-        <p>Captions land as a transparent clip above your edit. Your footage is never re-rendered or touched.</p>
-      </div>
+    <div class="vs-wrap">
+      <table class="vs">
+        <thead>
+          <tr>
+            <th scope="col"><span class="visually-hidden">Feature</span></th>
+            <th scope="col" class="us">CapBeat</th>
+            <th scope="col">Subscription tools</th>
+            <th scope="col">Premiere built-in</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Animated word by word</th><td class="us y">✓</td><td class="y">✓</td><td class="n">–</td></tr>
+          <tr><th scope="row">Runs offline, no upload</th><td class="us y">✓</td><td class="n">rarely</td><td class="y">✓</td></tr>
+          <tr><th scope="row">Reads song lyrics</th><td class="us y">✓</td><td class="n">–</td><td class="n">–</td></tr>
+          <tr><th scope="row">Price</th><td class="us">€0 or €79 once</td><td>$80–240 a year</td><td>included</td></tr>
+        </tbody>
+      </table>
     </div>
-  </div>
-</section>
-
-<!-- ================================================== Styles -->
-<section id="styles">
-  <div class="shell">
-    <div class="sec-head">
-      <h2>Styles you know from your feed</h2>
-      <p>Size, colors, position and words per cue are yours in every preset. Pro adds any installed font, an adjustable drop shadow and a background box.</p>
-    </div>
-    <div class="styles-grid">
-      <div class="style-tile">
-        <div class="demo-line"><span>WORD</span><span class="w-act">BY</span><span>WORD</span></div>
-        <span class="lab">Pop</span>
-      </div>
-      <div class="style-tile">
-        <div class="demo-line"><span class="w-fill">FILLS</span><span class="w-fill">AS</span><span>YOU</span><span>SING</span></div>
-        <span class="lab">Karaoke</span>
-      </div>
-      <div class="style-tile">
-        <div class="demo-line one-word"><span class="w-act">PUNCHY</span></div>
-        <span class="lab">One word</span>
-      </div>
-      <div class="style-tile">
-        <div class="demo-line"><span>WORD</span><span class="w-box">ON</span><span>BAR</span></div>
-        <span class="lab">Boxed</span>
-        <span class="pro-chip">Pro</span>
-      </div>
-      <div class="style-tile">
-        <div class="demo-line w-pill-line"><span>Soft</span><span class="w-act2">and</span><span>round</span></div>
-        <span class="lab">Pill</span>
-        <span class="pro-chip">Pro</span>
-      </div>
-      <div class="style-tile">
-        <div class="demo-line" style="opacity:.92"><span>SIMPLE</span><span>NO</span><span>CIRCUS</span></div>
-        <span class="lab">Fade</span>
-      </div>
-    </div>
+    <p class="vs-note">Subscription prices from the vendors’ own pages (AutoCut, Captioneer, CaptionX, SubMachine), October 2026.</p>
   </div>
 </section>
 
 <!-- ================================================== Pricing -->
 <section id="pricing" class="pricing">
   <div class="shell">
-    <div class="sec-head center">
-      <h2>Pay once. Not every month.</h2>
-      <p>Everything computes on your machine — we have zero server cost per video. Charging a subscription for that would be rude.</p>
+    <div class="center-head">
+      <h2>Pay once. Keep it forever.</h2>
     </div>
 
     <div class="tiers">
@@ -294,114 +211,30 @@
         <div class="t-name">Free</div>
         <div class="t-price">€0</div>
         <ul>
-          <li>Full recognition quality — all models up to Large-v3</li>
-          <li>29 languages, auto-detected</li>
-          <li>3 caption styles with your colors, size and position</li>
-          <li>Every Pro style and setting to try in the live preview</li>
-          <li>5 drop-in object animations</li>
+          <li>3 caption styles</li>
           <li>Videos up to 10 minutes</li>
           <li>No watermark, no account</li>
+          <li>Try every Pro feature in the preview</li>
         </ul>
         <a class="btn" href="https://buy.polar.sh/polar_cl_UBzH7JwDbSbKJ4mGbP7Q3WBy0e9HrLJKyGiNG1zJ5A0">Download free <span class="sub">· Windows 10/11</span></a>
-        <a class="btn" href="mac.html" style="margin-top:8px">Download for Mac <span class="sub">· join the waitlist</span></a>
-        <div class="t-fine">Your email is used to send you the download link. Product news only if you tick the box at checkout — see the <a href="datenschutz.html" style="color:var(--caption)">privacy policy</a>.</div>
-        <div class="t-fine">On a Mac? <a href="mac.html" style="color:var(--caption)">Join the Mac waitlist</a> — you'll hear the day it ships.</div>
+        <div class="t-fine">On a Mac? <a href="mac.html" style="color:var(--caption)">Join the waitlist</a>. We use your email only to send the download link. <a href="datenschutz.html" style="color:var(--caption)">Privacy</a></div>
       </div>
 
       <div class="tier tier--lead">
         <div class="t-name">Pro</div>
-        <div class="t-price">€79 <small>one-time · 3 machines</small></div>
+        <div class="t-price">€79 <small>one-time · 3 computers</small></div>
+        <div class="anchor">Subscriptions: <s>$80–240 a year</s></div>
         <ul>
-          <li><b>Music mode — lyrics from a finished mix</b></li>
-          <li>All 8 caption styles — including the hand-drawn sketch look</li>
-          <li>Any installed font, adjustable drop shadow, background box</li>
-          <li>All 19 drop-in animations + true motion blur</li>
-          <li>SRT export — word-timed captions as a file for any workflow</li>
-          <li>Unlimited video length</li>
-          <li>Email support</li>
-          <li>2 years of updates, then your version runs forever</li>
-          <li class="soon">Silence &amp; pause cutting <span class="chip">in the works</span></li>
-          <li class="soon">Gentle AI pass over transcripts <span class="chip">in the works</span></li>
-          <li class="soon">SRT import <span class="chip">in the works</span></li>
+          <li><b>Music mode: lyrics from a finished song</b></li>
+          <li>All 8 styles, any font, drop shadow</li>
+          <li>Unlimited length and SRT export</li>
+          <li>All 19 drop-in animations</li>
+          <li>2 years of updates, runs forever</li>
         </ul>
-        <a class="btn btn--loud" href="https://buy.polar.sh/polar_cl_zv6pu9KQAUBAyWdWkmKKGIkIcijkCUQlQh0kd1M9tqe">Get Pro <span class="sub">· €79 one-time</span></a>
-        <div class="t-guarantee"><b>14-day money-back guarantee.</b> Not happy? One email, full refund, no questions asked.</div>
-        <div class="t-fine">Secure checkout &amp; invoicing by Polar (Merchant of Record).</div>
+        <a class="btn btn--loud" href="https://buy.polar.sh/polar_cl_zv6pu9KQAUBAyWdWkmKKGIkIcijkCUQlQh0kd1M9tqe">Get Pro <span class="sub">· €79 once</span></a>
+        <div class="t-guarantee"><b>14-day money-back guarantee.</b> One email, full refund, no questions asked.</div>
+        <div class="t-fine">Secure checkout and invoice by Polar (Merchant of Record).</div>
       </div>
-
-      <div class="tier" style="opacity:.55">
-        <div class="t-name">Studio</div>
-        <div class="t-price">€299 <small>one-time · for teams</small></div>
-        <ul>
-          <li>Everything in Pro</li>
-          <li>More machines for the whole team</li>
-          <li>Company invoice</li>
-          <li>Priority support</li>
-          <li>Shared team style presets <span class="chip" style="font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--vocal);border:1px solid rgba(169,139,255,.4);border-radius:999px;padding:1px 7px;margin-left:6px">in the works</span></li>
-        </ul>
-        <span class="btn" style="pointer-events:none;cursor:default" aria-disabled="true">Studio <span class="sub">· coming soon</span></span>
-        <div class="t-fine">Buying for a team already? <a href="mailto:support@getcapbeat.com?subject=CapBeat%20Studio" style="color:var(--caption)">Email us</a> and we'll open it up for you.</div>
-      </div>
-    </div>
-
-    <div class="compare">
-      <h3>What captions cost over three years</h3>
-      <div class="tbl-wrap">
-        <table>
-          <thead>
-            <tr><th>Tool</th><th>Model</th><th class="num">3 years</th><th>Lyrics from a mix</th><th>Runs without upload</th></tr>
-          </thead>
-          <tbody>
-            <tr class="self"><td>CapBeat Pro</td><td>€79 one-time</td><td class="num"><strong>€79</strong></td><td class="t-yes">yes</td><td class="t-yes">yes</td></tr>
-            <tr><td>PremiereCopilot Pro+</td><td>$7.99/mo</td><td class="num">$287*</td><td class="t-no">no</td><td class="t-yes">yes</td></tr>
-            <tr><td>Captioneer</td><td>$15/mo or $150 lifetime</td><td class="num">$150–540</td><td class="t-no">no</td><td class="t-yes">yes</td></tr>
-            <tr><td>Submagic</td><td>subscription</td><td class="num">from&nbsp;$360*</td><td class="t-no">no</td><td class="t-no">web upload</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="tbl-fine">Prices as listed on each vendor’s website, July 31, 2026. *Annual figures taken from PremiereCopilot’s own comparison table — verify before publishing this page.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================== Privacy, small -->
-<section class="quiet-strip tight" aria-label="Privacy">
-  <div class="shell">
-    <h2>By the way: it works on a plane.</h2>
-    <p>Transcription, vocal separation, rendering — all of it runs on your machine. No account, no cloud, no queue. It needs the internet exactly once: to download the AI models on first start. For NDA footage that’s not a footnote, it’s the requirement.</p>
-  </div>
-</section>
-
-<!-- ================================================== Languages -->
-<section class="tight" id="languages">
-  <div class="shell">
-    <div class="sec-head">
-      <h2>29 languages, auto-detected</h2>
-      <p>Right-to-left included: Arabic and Hebrew captions are laid out correctly — in reading direction, word by word.</p>
-    </div>
-    <div class="langs">
-      <span>English</span><span>Español</span><span>Deutsch</span><span>Français</span><span>Italiano</span><span>Português</span><span>Nederlands</span><span>Polski</span><span>Türkçe</span><span>Русский</span><span>Українська</span><span>العربية</span><span>עברית</span><span>हिन्दी</span><span>日本語</span><span>한국어</span><span>中文</span><span>Svenska</span><span>Dansk</span><span>Norsk</span><span>Suomi</span><span>Čeština</span><span>Ελληνικά</span><span>Magyar</span><span>Română</span><span>Bahasa Indonesia</span><span>Tiếng Việt</span><span>ไทย</span><span>...</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================== Roadmap -->
-<section class="tight" id="roadmap">
-  <div class="shell">
-    <div class="sec-head">
-      <h2>What it does — and what’s next</h2>
-      <p>We don’t promise features that don’t exist. This is the honest state of things.</p>
-    </div>
-    <div class="roadmap">
-      <div class="rm"><span class="st now">Now</span><h3>Word-by-word captions</h3><p>Transcription, live preview, corrections, rendering onto the timeline.</p></div>
-      <div class="rm"><span class="st now">Now</span><h3>Music mode</h3><p>Local vocal separation, lyrics from a finished mix.</p></div>
-      <div class="rm"><span class="st now">Now</span><h3>Panel in 10 languages</h3><p>Follows your Premiere language automatically.</p></div>
-      <div class="rm"><span class="st next">In the works</span><h3>Silence &amp; pause cutting</h3><p>Detect dead air and cut it from the sequence on request.</p></div>
-      <div class="rm"><span class="st next">In the works</span><h3>Gentle AI pass</h3><p>Names, punctuation, jargon — checked locally, never rewritten.</p></div>
-      <div class="rm"><span class="st now">Now</span><h3>Drop-in animations</h3><p>19 fly-ins, pops and bounces with real easing and true motion blur — <a href="animations.html" style="color:var(--caption)">see them in action</a>.</p></div>
-      <div class="rm"><span class="st now">Now</span><h3>SRT export</h3><p>Word-timed captions as a standard .srt file — hand them to any workflow (Pro).</p></div>
-      <div class="rm"><span class="st next">In the works</span><h3>SRT import</h3><p>Bring finished transcripts in instead of re-transcribing.</p></div>
-      <div class="rm"><span class="st next">In the works</span><h3>macOS version</h3><p>The panel itself is already cross-platform; the bundled AI runtime and the installer are being rebuilt for Apple Silicon. <a href="mac.html" style="color:var(--caption)">Email us</a> and we'll tell you the day it ships.</p></div>
     </div>
   </div>
 </section>
@@ -409,53 +242,41 @@
 <!-- ================================================== FAQ -->
 <section id="faq">
   <div class="shell">
-    <div class="sec-head">
-      <h2>Honest answers to real questions</h2>
+    <div class="center-head">
+      <h2>Questions</h2>
     </div>
-    <div class="faq">
-      <details>
-        <summary>Why does Windows warn me during installation?</summary>
-        <div class="a"><p>CapBeat is digitally signed, so Windows names <b>Morenotless</b> as the publisher instead of calling it unknown. SmartScreen can still warn while a fresh version builds up downloads, which is about age, not safety. Click “More info” → “Run anyway”.</p></div>
-      </details>
+    <div class="faq" style="margin: 32px auto 0">
       <details>
         <summary>Does it run on Mac?</summary>
-        <div class="a"><p>Not yet — the download is a Windows installer and will not run on macOS. CapBeat currently needs Windows 10/11 with Premiere Pro 2023 or newer. A Mac build is actively being worked on: the panel is already cross-platform, but the bundled speech runtime and the installer have to be rebuilt and notarized for Apple Silicon. We won’t name a date we can’t keep — <a href="mac.html">email us</a> and you’ll hear the day it’s out.</p></div>
-      </details>
-      <details>
-        <summary>How good is music mode really?</summary>
-        <div class="a"><p>On our reference clip: 14 recognized words without separation, 47 with — the complete lyric. It shines on clearly sung pop, rap and singer-songwriter material. Extreme metal vocals or very dense mixes remain hard even after separation. So: test your material with the free version first, then buy.</p></div>
-      </details>
-      <details>
-        <summary>What happens after the 2 years of updates?</summary>
-        <div class="a"><p>Your version keeps running unchanged, forever. You lose nothing — you just stop receiving new features until you decide, voluntarily, to upgrade to a future major version (discounted for existing customers).</p></div>
-      </details>
-      <details>
-        <summary>Do I get my money back?</summary>
-        <div class="a"><p>14 days, no questions asked, by email. We don’t want customers who feel burned.</p></div>
-      </details>
-      <details>
-        <summary>I bought Pro — how do I activate it?</summary>
-        <div class="a"><p>Right after checkout, Polar (our payment provider) emails you a license key. In Premiere, open the CapBeat panel, scroll to the License card, paste the key and click Activate. Done — music mode, all styles and unlimited length are unlocked. Pro covers 3 machines; the panel has a deactivate button that frees up a seat if you switch computers. Lost the key? Open your purchase at <a href="https://polar.sh/purchases">polar.sh/purchases</a> — it's listed there.</p></div>
+        <div class="a"><p>Not yet. CapBeat needs Windows 10/11 and Premiere Pro 2023 or newer. <a href="mac.html" style="color:var(--caption)">Join the Mac waitlist</a>.</p></div>
       </details>
       <details>
         <summary>Are my videos uploaded anywhere?</summary>
-        <div class="a"><p>No. There is no server they could be uploaded to. The only internet connection is the one-time download of the AI models on first start (~1.5 GB speech, ~80 MB separation).</p></div>
+        <div class="a"><p>No. Everything runs on your computer. The only download is the speech model, once.</p></div>
       </details>
       <details>
-        <summary>Premiere has built-in captions — why this?</summary>
-        <div class="a"><p>Premiere’s transcription is fine for spoken language and plain subtitles. It can’t do word-by-word social-style animations, and it fails on music like everything else. CapBeat fills exactly those two gaps.</p></div>
+        <summary>Why does Windows warn me during installation?</summary>
+        <div class="a"><p>The installer is signed by Morenotless. SmartScreen can still warn on a fresh version until it has enough downloads. Click “More info”, then “Run anyway”. <a href="download.html" style="color:var(--caption)">Step by step</a>.</p></div>
+      </details>
+      <details>
+        <summary>How do I activate Pro?</summary>
+        <div class="a"><p>You get a license key by email. Paste it into the License tab of the panel. Pro covers 3 computers.</p></div>
+      </details>
+      <details>
+        <summary>Do I get my money back?</summary>
+        <div class="a"><p>Yes. Within 14 days, one email, full refund, no questions asked.</p></div>
       </details>
     </div>
   </div>
 </section>
 
-<!-- ================================================== Outro -->
-<section class="outro">
+<!-- ================================================== Final CTA -->
+<section class="final">
   <div class="shell">
-    <h2>The next lyric types itself.</h2>
-    <div class="hero-ctas">
-      <a class="btn btn--loud" href="#pricing">Download free</a>
-      <a class="btn" href="#music-mode">See the proof first</a>
+    <h2>Your next video, captioned in one click.</h2>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn--loud" href="https://buy.polar.sh/polar_cl_UBzH7JwDbSbKJ4mGbP7Q3WBy0e9HrLJKyGiNG1zJ5A0">Download free</a>
+      <a class="link-arrow" href="#pricing">See Pro →</a>
     </div>
   </div>
 </section>
@@ -465,17 +286,15 @@
   <div class="shell">
     <div class="col">
       <b>CapBeat</b>
-      <a href="blog/">Blog</a>
       <a href="auto-captions.html">Auto captions for speech</a>
       <a href="animations.html">Drop-in animations</a>
-      <a href="#music-mode">Music mode</a>
+      <a href="blog/">Blog</a>
       <a href="#pricing">Pricing</a>
-      <a href="#roadmap">Roadmap</a>
     </div>
     <div class="col">
       <b>Help</b>
-      <a href="#faq">FAQ</a>
       <a href="support.html">Support &amp; troubleshooting</a>
+      <a href="download.html">Installation</a>
       <a href="mailto:support@getcapbeat.com">support@getcapbeat.com</a>
     </div>
     <div class="col">
@@ -483,17 +302,81 @@
       <a href="impressum.html">Imprint (Impressum)</a>
       <a href="datenschutz.html">Privacy policy</a>
     </div>
-    <p class="fine">Adobe and Premiere Pro are trademarks of Adobe Inc. This plugin is an independent product and is not affiliated with Adobe. Speech recognition: Whisper (OpenAI, MIT license) · Vocal separation: Demucs (Meta AI Research, MIT license) — both run locally.</p>
+    <p class="fine">Adobe and Premiere Pro are trademarks of Adobe Inc. CapBeat is an independent product and is not affiliated with Adobe. Speech recognition: Whisper (OpenAI, MIT license). Vocal separation: Demucs (Meta AI Research, MIT license). Both run locally.</p>
   </div>
 </footer>
 
 <script>
 /* ============================================================
-   Hero demo: the same line twice.
-   Left (mix): fragments with gaps and mistakes.
-   Right (music mode): complete lines, word by word, the active
-   word in yellow — exactly like inside the plugin.
-   The lines are invented, not real song lyrics.
+   Hero-Demo: Captions im Telefon, Stil per Knopf umschaltbar.
+   Dieselben Stile wie im Plugin. Läuft Wort für Wort im
+   Sprechtempo; bei reduzierter Bewegung steht ein Standbild.
+   ============================================================ */
+(function () {
+    var cap = document.getElementById("pcap");
+    if (!cap) { return; }
+    var ZEILEN = [
+        ["THIS", "IS", "HOW"],
+        ["YOUR", "CAPTIONS"],
+        ["COULD", "LOOK"],
+        ["IN", "PREMIERE"]
+    ];
+    var knoepfe = document.querySelectorAll(".chip-btn[data-stil]");
+    var reduziert = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var zeile = 0, wort = 0, timer = null, autoWechsel = true, durchlaeufe = 0;
+    var REIHE = ["pop", "karaoke", "box", "pill", "typer"];
+
+    function zeige() {
+        var w = ZEILEN[zeile];
+        cap.innerHTML = "";
+        w.forEach(function (t, i) {
+            var s = document.createElement("span");
+            s.textContent = cap.getAttribute("data-stil") === "pill" ? t.charAt(0) + t.slice(1).toLowerCase() : t;
+            if (i < wort) { s.className = "done"; }
+            if (i === wort) { s.className = "on"; }
+            cap.appendChild(s);
+        });
+    }
+
+    function setzeStil(stil) {
+        cap.setAttribute("data-stil", stil);
+        knoepfe.forEach(function (k) { k.setAttribute("aria-pressed", String(k.getAttribute("data-stil") === stil)); });
+        zeige();
+    }
+
+    function tick() {
+        zeige();
+        wort++;
+        if (wort > ZEILEN[zeile].length - 1) {
+            timer = setTimeout(function () {
+                wort = 0;
+                zeile = (zeile + 1) % ZEILEN.length;
+                if (zeile === 0 && autoWechsel) {
+                    durchlaeufe++;
+                    setzeStil(REIHE[durchlaeufe % REIHE.length]);
+                }
+                tick();
+            }, 520);
+            return;
+        }
+        timer = setTimeout(tick, 360);
+    }
+
+    knoepfe.forEach(function (k) {
+        k.addEventListener("click", function () {
+            autoWechsel = false;           /* wer klickt, bestimmt selbst */
+            setzeStil(k.getAttribute("data-stil"));
+        });
+    });
+
+    if (reduziert) { wort = 1; zeige(); return; }
+    tick();
+})();
+
+/* ============================================================
+   Musikmodus-Demo: dieselbe Zeile zweimal – links aus dem Mix
+   (Bruchstücke), rechts nach der Gesangstrennung (vollständig).
+   Die Zeilen sind ausgedacht, keine echten Songtexte.
    ============================================================ */
 (function () {
     var LINES = [
@@ -501,17 +384,14 @@
         ["LOUDER", "THAN", "MY", "HEARTBEAT"],
         ["I", "WRITE", "IT", "ON", "THE", "WALLS"]
     ];
-    /* What standard recognition makes of the mix: shreds per line. */
     var BROKEN = [
         [null, "NIGHT", null, null, "BUS?"],
         [null, null, null, "HEART—"],
         [null, "RIDE", null, null, null, null]
     ];
-
     var capOn = document.getElementById("capOn");
     var capOff = document.getElementById("capOff");
     if (!capOn || !capOff) { return; }
-
     var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     function renderLine(el, words, activeIndex, brokenMask) {
@@ -520,13 +400,8 @@
             var s = document.createElement("span");
             if (brokenMask) {
                 var b = brokenMask[i];
-                if (b === null) {
-                    s.textContent = "···";
-                    s.className = "miss";
-                } else {
-                    s.textContent = b;
-                    if (i > activeIndex) { s.className = "ghost"; }
-                }
+                if (b === null) { s.textContent = "···"; s.className = "miss"; }
+                else { s.textContent = b; if (i > activeIndex) { s.className = "ghost"; } }
             } else {
                 s.textContent = w;
                 if (i === activeIndex) { s.className = "active"; }
@@ -539,56 +414,36 @@
     if (reduced) {
         renderLine(capOn, LINES[0], 2, null);
         renderLine(capOff, LINES[0], LINES[0].length, BROKEN[0]);
-        return;
+    } else {
+        var line = 0, word = 0;
+        (function tick() {
+            var words = LINES[line];
+            renderLine(capOn, words, word, null);
+            renderLine(capOff, words, word, BROKEN[line]);
+            word++;
+            if (word >= words.length) {
+                word = 0;
+                line = (line + 1) % LINES.length;
+                window.setTimeout(tick, 900);
+                return;
+            }
+            window.setTimeout(tick, 430);
+        })();
     }
 
-    var line = 0, word = 0;
-    function tick() {
-        var words = LINES[line];
-        renderLine(capOn, words, word, null);
-        renderLine(capOff, words, word, BROKEN[line]);
-        word++;
-        if (word >= words.length) {
-            word = 0;
-            line = (line + 1) % LINES.length;
-            window.setTimeout(tick, 900);   /* short pause between lines */
-            return;
-        }
-        window.setTimeout(tick, 430);       /* singing tempo */
-    }
-    tick();
-})();
-
-/* Waveforms: mix is dense, vocals only where "singing" happens. */
-(function () {
     function fill(id, kind) {
         var el = document.getElementById(id);
         if (!el) { return; }
         for (var i = 0; i < 48; i++) {
             var bar = document.createElement("i");
-            var h;
-            if (kind === "mix") { h = 20 + Math.abs(Math.sin(i * 1.7)) * 70; }
-            else { h = (i % 9 < 5) ? 15 + Math.abs(Math.sin(i * 2.3)) * 75 : 6; }
+            var h = kind === "mix" ? 20 + Math.abs(Math.sin(i * 1.7)) * 70
+                                   : ((i % 9 < 5) ? 15 + Math.abs(Math.sin(i * 2.3)) * 75 : 6);
             bar.style.height = h + "%";
             el.appendChild(bar);
         }
     }
     fill("waveOff", "mix");
     fill("waveOn", "voc");
-
-    /* Bars for the three stems in the music-mode section */
-    document.querySelectorAll("[data-bars]").forEach(function (wrap) {
-        var kind = wrap.getAttribute("data-bars");
-        for (var i = 0; i < 34; i++) {
-            var bar = document.createElement("i");
-            var h;
-            if (kind === "mix") { h = 25 + Math.abs(Math.sin(i * 1.3) * Math.cos(i * .7)) * 70; }
-            else if (kind === "vocals") { h = (i % 8 < 5) ? 20 + Math.abs(Math.sin(i * 2.1)) * 75 : 8; }
-            else { h = 20 + Math.abs(Math.cos(i * 1.9)) * 55; }
-            bar.style.height = h + "%";
-            wrap.appendChild(bar);
-        }
-    });
 })();
 </script>
 <script src="reveal.js" defer></script>
@@ -596,11 +451,7 @@
 <!-- Seitenzaehler: GoatCounter, in der EU gehostet, ohne Cookies, ohne
      gespeicherte IP. Deshalb braucht diese Seite kein Einwilligungsbanner.
      Wer nicht gezaehlt werden will, findet auf /datenschutz.html einen
-     Knopf dafuer. Der setzt im Browser den Eintrag "skipgc" auf "t";
-     count.js prueft den von sich aus und zaehlt dann nicht mit.
-     Ein eigener filter() waere hier sinnlos - count.js ersetzt ihn
-     beim Laden durch seinen eigenen (am 14.9.2026 in der Quelle
-     nachgesehen). -->
+     Knopf dafuer (setzt "skipgc"; count.js prueft das selbst). -->
 <script data-goatcounter="https://capbeat.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 </body>
