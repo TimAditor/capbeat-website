@@ -683,3 +683,17 @@ footer .fine { width: 100%; margin-top: 10px; font-size: 12.5px; color: var(--mu
     margin: 0;
     flex: 1;
 }
+
+/* ---------------------------------------------- Black Friday (bf.js) */
+.bf-bar {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 14px;
+    padding: 10px 16px;
+    background: var(--caption); color: var(--caption-ink);
+    font-size: 14.5px; line-height: 1.35; text-align: center; text-decoration: none;
+}
+.bf-bar b { font-family: var(--brand); font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.bf-bar s { opacity: .6; }
+.bf-bar i { font-style: normal; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.bf-bar:hover i, .bf-bar:focus-visible i { text-decoration-thickness: 2px; }
+.bf-bar:focus-visible { outline: 2px solid var(--caption-ink); outline-offset: -4px; }
+.bf-alt { opacity: .5; font-weight: 400; }

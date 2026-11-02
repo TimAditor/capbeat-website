@@ -1,0 +1,41 @@
+name: Black-Friday-Banner
+
+# Stellt am 27.11.2026 kurz nach Mitternacht (deutsche Zeit) das Banner im
+# Plugin auf Black Friday um: promo-blackfriday.json wird zu promo.json.
+# Das Banner endet von selbst ("until": 2026-11-30). Die Website-Leiste
+# schaltet bf.js nach Datum, dafuer ist hier nichts zu tun.
+
+on:
+  schedule:
+    # 26.11. 23:05 UTC = 27.11. 0:05 MEZ. Zweiter Termin als Reserve,
+    # falls GitHub den ersten auslaesst (kommt bei Zeitplaenen vor).
+    - cron: "5 23 26 11 *"
+    - cron: "40 23 26 11 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  umschalten:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Banner tauschen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Nur im Jahr 2026 - der Zeitplan liefe sonst jedes Jahr wieder an
+          if [ "$(date -u +%Y)" != "2026" ]; then echo "Nicht 2026 - nichts zu tun."; exit 0; fi
+          if cmp -s promo-blackfriday.json promo.json; then echo "Schon umgestellt."; exit 0; fi
+          cp promo-blackfriday.json promo.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add promo.json
+          git commit -m "Banner: Black Friday 2026"
+          git push
+          # Pages neu bauen lassen - Pushes mit dem Actions-Token loesen
+          # das nicht immer selbst aus.
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" || true
