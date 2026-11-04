@@ -238,6 +238,21 @@
 .pcap[data-stil="marker"] span { padding: 0 0.12em; }
 .pcap[data-stil="marker"] span.on { color: #111; -webkit-text-stroke: 0; text-shadow: none; background: linear-gradient(100deg, transparent 2%, #ffe14d 6%, #ffe14d 94%, transparent 98%); border-radius: 0.08em; transform: rotate(-1.5deg); }
 
+/* Fokus (neu in 0.9.40): Schlüsselwörter groß und orange in eigener Zeile,
+   der Rest klein und weiß. Wörter erscheinen einfach, ohne Pop. */
+.pcap[data-stil="focus"] {
+    -webkit-text-stroke: 0;
+    text-transform: none;
+    gap: 0 0.28em;
+    line-height: 1.02;
+    font-size: clamp(16px, 1.6vw, 20px);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+.pcap[data-stil="focus"] span { transition: none; opacity: 0; }
+.pcap[data-stil="focus"] span.done,
+.pcap[data-stil="focus"] span.on { opacity: 1; }
+.pcap[data-stil="focus"] span.key { color: #ff7a1a; font-size: 1.85em; flex-basis: 100%; text-align: center; }
+
 /* Stil-Knöpfe – sehen aus wie im Panel */
 .chips {
     position: relative;
