@@ -66,8 +66,9 @@
 </section>
 
 <script>
-/* Die Antwort steht in der Adresse (?a=...). Gemessen wird der Klick bei
-   Resend, diese Seite sagt nur Danke - sie speichert nichts. */
+/* Die Antwort steht in der Adresse (?a=...). Gezaehlt wird sie anonym als
+   GoatCounter-Ereignis "antwort-..." (ohne Mailadresse, ohne Personenbezug):
+   so sehen wir, was Leute vom Kauf abhaelt. Klicks insgesamt: ops/antworten.js */
 (function () {
     var antwort = new URLSearchParams(location.search).get("a") || "";
     var texte = {
@@ -97,6 +98,11 @@
     };
     var t = texte[antwort];
     if (!t) { return; }
+    window.addEventListener("load", function () {
+        try {
+            window.goatcounter.count({ path: "antwort-" + antwort, title: "Mail 4: " + antwort, event: true });
+        } catch (e) {}
+    });
     document.getElementById("kicker").textContent = t.kicker;
     document.getElementById("kopf").innerHTML = t.kopf;
     document.getElementById("text").textContent = t.text;
